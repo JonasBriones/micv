@@ -1,29 +1,29 @@
-// Override default variables before the import
-$body-bg: #eeeeee;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
-$primary: #f4511e;
-$secondary: #0288d1;
-
-// Import Bootstrap and its default variables
-
-
-body, html {
-    font-family: 'Roboto', sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+html, body {
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
-html {
-    min-height: 100%;
-    position: relative;
+html{
+    height: 100vh;
 }
 
 body{
-    padding: 0;
-    margin: 0;
-    margin-bottom: 40px;
+    font-family: 'Josefin Sans', cursive;
 }
 
-.secondaryText{
-    color: $secondary;
+hr {
+    border-top: 1px solid #ccc;
+}
+
+.text-head{
+    font-size: 0.7rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }

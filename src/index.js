@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Micv } from './Micv';
+import { MicvApp } from './MicvApp';
 
-
+import './styles/styles.scss'
 
 ReactDOM.render(
-  <Micv />,
+  <MicvApp />,
   document.getElementById('root')
 );
+
