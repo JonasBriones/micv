@@ -6,7 +6,7 @@ const Index: React.FC = () => {
 	return (
 		<React.Fragment>
 			<Box>
-				<Typography variant='h1'>Bienvenidos</Typography>
+				<Typography variant="h1">Bienvenidos</Typography>
 			</Box>
 		</React.Fragment>
 	);
