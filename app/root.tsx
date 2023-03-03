@@ -6,12 +6,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from "@remix-run/react";
 import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
-import theme from './src/theme';
-import ClientStyleContext from './src/ClientStyleContext';
-import Layout from './src/Layout';
+import theme from './src/assets/theme';
+import ClientStyleContext from './src/assets/cache/ClientStyleContext';
+import { Layout } from './src/components/ui/layouts/layout';
+
 
 interface DocumentProps {
   children: React.ReactNode;
