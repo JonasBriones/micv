@@ -8,6 +8,8 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:import/recommended',
+		'@remix-run/eslint-config',
+		'@remix-run/eslint-config/jest-testing-library',
 		'plugin:import/typescript',
 		'plugin:jsx-a11y/recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -35,14 +37,8 @@ module.exports = {
 			'error',
 			'unix'
 		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'always'
-		],
+		'quotes': ['error','single'],
+		'semi': ['error','always'],
 		'import/no-unresolved': 'error',
 		'react/react-in-jsx-scope': 'off',
 		camelcase: 'error',

@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-export default function About() {
+const About: React.FC = () => {
 	return (
 		<React.Fragment>
 			<h1>test</h1>
 		</React.Fragment>
 	);
-}
+};
+export default About;
