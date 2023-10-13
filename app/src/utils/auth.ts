@@ -1,3 +1,0 @@
-const Login = () => {};
-
-export { Login };
