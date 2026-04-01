@@ -29,8 +29,10 @@ Está pensado como:
 
 ## 📂 Estructura del proyecto
 
-git clone https://github.com/jonasbriones/micv.git
-
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/jonasbriones/micv.git
+   ```
 
 2. Personaliza:
    - `index.html` → contenido (nombre, experiencia, etc.)
