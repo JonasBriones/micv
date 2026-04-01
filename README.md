@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📄 Mi CV Web
 
-## Getting Started
+Este repositorio contiene el código fuente de mi currículum vitae online, desplegado con GitHub Pages.
 
-First, run the development server:
+🔗 **Demo en vivo:**  
+https://jonasbriones.github.io/micv/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Sobre el proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este proyecto es una página web estática que presenta mi perfil profesional, experiencia, habilidades y formación de forma clara y accesible.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Está pensado como:
 
-## Learn More
+- 🌐 CV online accesible desde cualquier lugar  
+- 💼 Portafolio profesional  
+- 🧩 Base reutilizable para otros desarrolladores  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tecnologías utilizadas
+- HTML5  
+- CSS3  
+- JavaScript  
+- GitHub Pages  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📂 Estructura del proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+git clone https://github.com/jonasbriones/micv.git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+2. Personaliza:
+   - `index.html` → contenido (nombre, experiencia, etc.)
+
+3. Publica en GitHub Pages:
+   - Ve a **Settings → Pages**
+   - Selecciona la rama (`main` o `gh-pages`)
+   - Guarda los cambios  
+
+---
+
+## ✨ Personalización recomendada
+
+- Cambia colores y tipografía  
+- Añade secciones:
+  - Proyectos  
+  - Certificaciones  
+  - Contacto  
+- Integra:
+  - LinkedIn  
+  - GitHub  
+  - Email  
+
+---
+
+## 📸 Vista previa
+
+_Añade aquí una captura de pantalla de tu CV_
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas:
+
+1. Haz un fork  
+2. Crea una rama (`feature/nueva-mejora`)  
+3. Abre un Pull Request  
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.  
+Puedes usarlo libremente como base para tu propio CV.
+
+---
+
+## 👤 Autor
+
+**Jonas Briones**  
+- GitHub: https://github.com/jonasbriones  
+- Web: https://jonasbriones.github.io/micv/  
+
+---
+
+## 💡 Sugerencias
+
+- Añadir modo oscuro 🌙  
+- Mejorar diseño responsive (mobile-first)  
+- Optimizar SEO (meta tags, description)  
+- Añadir descarga en PDF del CV  
+- Integrar analytics (opcional)  
