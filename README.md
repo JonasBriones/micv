@@ -1,98 +1,48 @@
-# 📄 Mi CV Web
+# 📄 Mi CV Web — Jonathan Patricio Briones Lavados
 
-Este repositorio contiene el código fuente de mi currículum vitae online, desplegado con GitHub Pages.
+Este repositorio contiene el código fuente de mi **currículum vitae web interactivo y profesional**, sincronizado con los estándares ATS (Applicant Tracking Systems) y desplegado con **GitHub Pages**.
 
 🔗 **Demo en vivo:**  
-https://jonasbriones.github.io/micv/
+[https://jonasbriones.github.io/micv/](https://jonasbriones.github.io/micv/)
 
 ---
 
 ## 🚀 Sobre el proyecto
 
-Este proyecto es una página web estática que presenta mi perfil profesional, experiencia, habilidades y formación de forma clara y accesible.
+CV digital de alto impacto diseñado para destacar mi trayectoria como **Senior Cloud & DevOps Engineer**, **Site Reliability Engineer (SRE)** y **AWS Cloud Architect** con más de **13 años de experiencia**.
 
-Está pensado como:
-
-- 🌐 CV online accesible desde cualquier lugar  
-- 💼 Portafolio profesional  
-- 🧩 Base reutilizable para otros desarrolladores  
+### ✨ Características Principales
+- 🌙 / ☀️ **Soporte de Modo Oscuro y Claro:** Detección automática del sistema (`prefers-color-scheme`), selector interactivo y persistencia en `localStorage`.
+- 🖨️ **Exportación a PDF / Impresión Limpia:** Estilos `@media print` optimizados para generar un CV formal y limpio con un solo clic.
+- 📋 **Acciones Rápidas:** Copiado de correo electrónico con feedback háptico/toast y anuncios accesibles.
+- ♿ **Accesibilidad Web (WCAG 2.1 AA):** HTML5 semántico, enlace de salto para lectores de pantalla, atributos ARIA y navegación completa por teclado con `focus-visible`.
+- 🔍 **Optimización SEO y Redes Sociales:** Metadatos enriquecidos (Open Graph, Twitter Cards) y datos estructurados **Schema.org (JSON-LD)** para indexación en Google.
+- 📱 **Diseño Bento & Responsive:** Totalmente adaptado a dispositivos móviles, tablets y pantallas de escritorio.
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
-- HTML5  
-- CSS3  
-- JavaScript  
-- GitHub Pages  
+
+- **HTML5 Semántico & Schema.org JSON-LD**
+- **Tailwind CSS v4** (Modern Glassmorphism, CSS Variables, Bento Grid)
+- **Vanilla JavaScript** (Theme Switcher, Clipboard API, IntersectionObserver, Toast announcements)
+- **Google Fonts:** Plus Jakarta Sans & JetBrains Mono
+- **GitHub Pages** para despliegue continuo
 
 ---
 
-## 📂 Estructura del proyecto
+## 👤 Perfil Profesional y Contacto
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/jonasbriones/micv.git
-   ```
-
-2. Personaliza:
-   - `index.html` → contenido (nombre, experiencia, etc.)
-
-3. Publica en GitHub Pages:
-   - Ve a **Settings → Pages**
-   - Selecciona la rama (`main` o `gh-pages`)
-   - Guarda los cambios  
-
----
-
-## ✨ Personalización recomendada
-
-- Cambia colores y tipografía  
-- Añade secciones:
-  - Proyectos  
-  - Certificaciones  
-  - Contacto  
-- Integra:
-  - LinkedIn  
-  - GitHub  
-  - Email  
-
----
-
-## 📸 Vista previa
-
-_Añade aquí una captura de pantalla de tu CV_
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas:
-
-1. Haz un fork  
-2. Crea una rama (`feature/nueva-mejora`)  
-3. Abre un Pull Request  
+- **Nombre:** Jonathan Patricio Briones Lavados
+- **Rol:** Senior Cloud & DevOps Engineer | SRE | AWS Cloud Architect
+- **Ubicación:** Valladolid, España
+- **Teléfono:** [+34 614 215 322](tel:+34614215322)
+- **Email:** [jonathanpatricio.brioneslavados@gmail.com](mailto:jonathanpatricio.brioneslavados@gmail.com)
+- **LinkedIn:** [linkedin.com/in/jonathan-patricio-briones-lavados](https://linkedin.com/in/jonathan-patricio-briones-lavados)
+- **GitHub:** [github.com/jonasbriones](https://github.com/jonasbriones)
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia MIT.  
-Puedes usarlo libremente como base para tu propio CV.
-
----
-
-## 👤 Autor
-
-**Jonas Briones**  
-- GitHub: https://github.com/jonasbriones  
-- Web: https://jonasbriones.github.io/micv/  
-
----
-
-## 💡 Sugerencias
-
-- Añadir modo oscuro 🌙  
-- Mejorar diseño responsive (mobile-first)  
-- Optimizar SEO (meta tags, description)  
-- Añadir descarga en PDF del CV  
-- Integrar analytics (opcional)  
+Este proyecto está bajo la licencia [MIT](LICENSE).

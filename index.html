@@ -3,149 +3,1749 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV — Jonathan Briones Lavados</title>
     
+    <!-- SEO & Metadata -->
+    <title>Jonathan Patricio Briones Lavados | Senior Cloud & DevOps Engineer | SRE | AWS Architect</title>
+    <meta name="description" content="CV de Jonathan Patricio Briones Lavados — Senior Cloud & DevOps Engineer, SRE y AWS Cloud Architect con más de 13 años de experiencia en Cloud Computing, Kubernetes, Terraform e IaC." />
+    <meta name="keywords" content="Jonathan Briones, Cloud Architect, DevOps Engineer, SRE, Site Reliability Engineering, AWS, Azure, GCP, Kubernetes, Terraform, IaC, CI/CD, FinOps, Valladolid, España" />
+    <meta name="author" content="Jonathan Patricio Briones Lavados" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jonasbriones.github.io/micv/" />
+    <meta name="theme-color" content="#090d16" id="meta-theme-color" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Jonathan Patricio Briones Lavados — Senior Cloud & DevOps Engineer | SRE | AWS Architect" />
+    <meta property="og:description" content="Más de 13 años de experiencia en Cloud Computing, DevOps, Kubernetes, Terraform e Infrastructure as Code (IaC). Trayectoria, métricas de impacto y competencias técnicas." />
+    <meta property="og:url" content="https://jonasbriones.github.io/micv/" />
+    <meta property="og:site_name" content="CV Web Jonathan Briones" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jonathan Patricio Briones Lavados — Senior Cloud & DevOps Engineer" />
+    <meta name="twitter:description" content="Senior Cloud & DevOps Engineer | SRE | AWS Cloud Architect con +13 años de experiencia en AWS, Terraform y Kubernetes." />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jonathan Patricio Briones Lavados",
+      "jobTitle": "Senior Cloud & DevOps Engineer | Site Reliability Engineer (SRE) | AWS Cloud Architect",
+      "description": "Profesional con más de 13 años de experiencia en Cloud Computing, DevOps, Kubernetes, Terraform e Infrastructure as Code (IaC).",
+      "telephone": "+34614215322",
+      "email": "jonathanpatricio.brioneslavados@gmail.com",
+      "url": "https://jonasbriones.github.io/micv/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valladolid",
+        "addressCountry": "España"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/jonathan-patricio-briones-lavados",
+        "https://github.com/jonasbriones"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ayesa Digital"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Pontificia Universidad Católica de Chile"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "IP Santo Tomás"
+        }
+      ],
+      "knowsAbout": [
+        "Amazon Web Services (AWS)",
+        "Microsoft Azure",
+        "Google Cloud Platform (GCP)",
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "DevOps",
+        "Site Reliability Engineering (SRE)",
+        "Platform Engineering",
+        "CI/CD",
+        "Infrastructure as Code",
+        "Observabilidad",
+        "FinOps"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
-    <!-- Animaciones AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <style> body { font-family: 'Poppins', sans-serif; } </style>
+    <!-- COMPLETE SELF-CONTAINED MODERN CSS (Zero external CSS/CDN dependencies needed) -->
+    <style>
+        /* CSS Reset & Design Tokens */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Light Palette */
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-card-glass: rgba(255, 255, 255, 0.94);
+            --bg-header: rgba(255, 255, 255, 0.9);
+            --bg-badge: #f1f5f9;
+            --bg-badge-hover: #e2e8f0;
+
+            --text-title: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+
+            --border-color: #e2e8f0;
+            --border-card: #cbd5e1;
+
+            --cyan-accent: #0891b2;
+            --cyan-bg: #ecfeff;
+            --cyan-text: #0e7490;
+            --cyan-border: #a5f3fc;
+
+            --blue-accent: #2563eb;
+            --blue-bg: #eff6ff;
+            --blue-text: #1d4ed8;
+            --blue-border: #bfdbfe;
+
+            --emerald-accent: #059669;
+            --emerald-bg: #ecfdf5;
+            --emerald-text: #047857;
+            --emerald-border: #a7f3d0;
+
+            --amber-accent: #d97706;
+            --amber-bg: #fffbeb;
+            --amber-text: #b45309;
+            --amber-border: #fde68a;
+
+            --indigo-accent: #4f46e5;
+            --indigo-bg: #eef2ff;
+            --indigo-text: #4338ca;
+            --indigo-border: #c7d2fe;
+
+            --purple-accent: #7c3aed;
+            --purple-bg: #faf5ff;
+            --purple-text: #6d28d9;
+            --purple-border: #e9d5ff;
+
+            --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 8px 30px -4px rgba(15, 23, 42, 0.08);
+            --shadow-glow: 0 0 25px rgba(6, 182, 212, 0.15);
+        }
+
+        html.dark {
+            /* Dark Palette */
+            --bg-body: #090d16;
+            --bg-card: #0f172a;
+            --bg-card-glass: rgba(15, 23, 42, 0.88);
+            --bg-header: rgba(9, 13, 22, 0.92);
+            --bg-badge: #1e293b;
+            --bg-badge-hover: #334155;
+
+            --text-title: #ffffff;
+            --text-body: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-light: #64748b;
+
+            --border-color: #1e293b;
+            --border-card: #334155;
+
+            --cyan-accent: #22d3ee;
+            --cyan-bg: rgba(6, 182, 212, 0.15);
+            --cyan-text: #67e8f9;
+            --cyan-border: rgba(6, 182, 212, 0.4);
+
+            --blue-accent: #60a5fa;
+            --blue-bg: rgba(59, 130, 246, 0.15);
+            --blue-text: #93c5fd;
+            --blue-border: rgba(59, 130, 246, 0.4);
+
+            --emerald-accent: #34d399;
+            --emerald-bg: rgba(16, 185, 129, 0.15);
+            --emerald-text: #6ee7b7;
+            --emerald-border: rgba(16, 185, 129, 0.4);
+
+            --amber-accent: #fbbf24;
+            --amber-bg: rgba(245, 158, 11, 0.15);
+            --amber-text: #fde68a;
+            --amber-border: rgba(245, 158, 11, 0.4);
+
+            --indigo-accent: #818cf8;
+            --indigo-bg: rgba(99, 102, 241, 0.15);
+            --indigo-text: #a5b4fc;
+            --indigo-border: rgba(99, 102, 241, 0.4);
+
+            --purple-accent: #c084fc;
+            --purple-bg: rgba(168, 85, 247, 0.15);
+            --purple-text: #d8b4fe;
+            --purple-border: rgba(168, 85, 247, 0.4);
+
+            --shadow-card: 0 4px 25px -2px rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 10px 35px -3px rgba(0, 0, 0, 0.6);
+            --shadow-glow: 0 0 35px rgba(34, 211, 238, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        .font-mono {
+            font-family: var(--font-mono);
+        }
+
+        /* Layout Container */
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--bg-header);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand-avatar {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 0.75rem;
+            background: linear-gradient(135deg, #0891b2, #2563eb, #4f46e5);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+        }
+
+        .brand-text h2 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-title);
+            line-height: 1.2;
+        }
+
+        .brand-text span {
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            color: var(--cyan-accent);
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: var(--text-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--cyan-accent);
+            background: var(--bg-badge);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Buttons & Badges */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0891b2, #2563eb);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(8, 145, 178, 0.3);
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.08);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--bg-badge);
+            color: var(--text-title);
+            border-color: var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-badge-hover);
+            border-color: var(--border-card);
+        }
+
+        .icon-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+            background: var(--bg-badge);
+            color: var(--text-title);
+            border: 1px solid var(--border-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .icon-btn:hover {
+            background: var(--bg-badge-hover);
+            border-color: var(--border-card);
+        }
+
+        /* Cards & Glassmorphism */
+        .card {
+            background: var(--bg-card-glass);
+            border: 1px solid var(--border-card);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--border-accent);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 2.5rem 0 1.5rem;
+        }
+
+        .hero-card {
+            background: var(--bg-card-glass);
+            border: 1px solid var(--border-card);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .hero-card {
+                padding: 2.75rem;
+            }
+        }
+
+        .hero-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 992px) {
+            .hero-layout {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .hero-content {
+            max-width: 720px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: var(--emerald-bg);
+            color: var(--emerald-text);
+            border: 1px solid var(--emerald-border);
+            align-self: flex-start;
+        }
+
+        .status-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: var(--emerald-accent);
+            box-shadow: 0 0 8px var(--emerald-accent);
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #0891b2, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        html.dark .hero-title .gradient-text {
+            background: linear-gradient(135deg, #22d3ee, #60a5fa, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .hero-subtitle .dot {
+            color: var(--cyan-accent);
+            margin: 0 0.25rem;
+        }
+
+        .hero-desc {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        .hero-desc strong {
+            color: var(--text-title);
+        }
+
+        .contact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.75rem;
+            background: var(--bg-badge);
+            border: 1px solid var(--border-color);
+            color: var(--text-title);
+            font-size: 0.825rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .contact-pill:hover {
+            border-color: var(--cyan-accent);
+            color: var(--cyan-accent);
+        }
+
+        .contact-pill-blue {
+            background: var(--blue-bg);
+            color: var(--blue-text);
+            border-color: var(--blue-border);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        @media (min-width: 576px) {
+            .hero-actions {
+                flex-direction: row;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero-actions {
+                flex-direction: column;
+                width: auto;
+                min-width: 220px;
+            }
+        }
+
+        /* Metrics Bento Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 992px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .metric-card {
+            background: var(--bg-card-glass);
+            border: 1px solid var(--border-card);
+            border-left: 4px solid var(--cyan-accent);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-card.blue { border-left-color: var(--blue-accent); }
+        .metric-card.emerald { border-left-color: var(--emerald-accent); }
+        .metric-card.indigo { border-left-color: var(--indigo-accent); }
+
+        .metric-val {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.1;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-top: 0.35rem;
+        }
+
+        /* Section Styling */
+        .section-block {
+            margin-top: 3.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+            background: var(--cyan-bg);
+            color: var(--cyan-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon.blue { background: var(--blue-bg); color: var(--blue-accent); }
+        .section-icon.amber { background: var(--amber-bg); color: var(--amber-accent); }
+        .section-icon.emerald { background: var(--emerald-bg); color: var(--emerald-accent); }
+
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.375rem;
+            width: 2px;
+            background: var(--border-card);
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 1.25rem;
+            width: 0.875rem;
+            height: 0.875rem;
+            border-radius: 50%;
+            background: var(--cyan-accent);
+            box-shadow: 0 0 0 4px var(--bg-body);
+        }
+
+        .timeline-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @media (min-width: 640px) {
+            .timeline-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+
+        .role-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--cyan-accent);
+        }
+
+        .date-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            background: var(--bg-badge);
+            color: var(--text-title);
+            border: 1px solid var(--border-color);
+            align-self: flex-start;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.925rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .bullet-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--cyan-accent);
+            font-weight: bold;
+        }
+
+        .bullet-list strong {
+            color: var(--text-title);
+            font-weight: 600;
+        }
+
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tech-tag {
+            font-size: 0.725rem;
+            font-family: var(--font-mono);
+            padding: 0.25rem 0.55rem;
+            border-radius: 0.5rem;
+            background: var(--bg-badge);
+            color: var(--text-title);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Bento Grid Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .skill-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-icon {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .skill-badge {
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+            background: var(--bg-badge);
+            color: var(--text-title);
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-badge.highlight {
+            background: var(--cyan-bg);
+            color: var(--cyan-text);
+            border-color: var(--cyan-border);
+        }
+
+        /* Two column layout for Certs & Education */
+        .two-cols-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 992px) {
+            .two-cols-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .list-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+
+        .cert-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .cert-abbr {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 0.6rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-title {
+            font-size: 0.925rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .cert-org {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .badge-status {
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            white-space: nowrap;
+        }
+
+        /* Footer & Banner */
+        .contact-banner {
+            background: var(--bg-card-glass);
+            border: 1px solid var(--border-card);
+            border-radius: 1.5rem;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            box-shadow: var(--shadow-md);
+            margin-top: 3.5rem;
+        }
+
+        .contact-banner h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-title);
+            max-width: 600px;
+        }
+
+        .contact-banner p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            max-width: 550px;
+        }
+
+        .site-footer {
+            margin-top: 3.5rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-header);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .footer-content {
+                flex-direction: row;
+            }
+        }
+
+        /* Accessible Screen Reader Utility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .sr-only:focus {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 100;
+            width: auto;
+            height: auto;
+            padding: 0.75rem 1.25rem;
+            background: #0891b2;
+            color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            clip: auto;
+        }
+
+        /* Toast Popup */
+        #toast-container {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 999;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toast-msg {
+            background: var(--text-title);
+            color: var(--bg-body);
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.25s ease;
+        }
+
+        .toast-msg.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Print Mode */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 10.5pt !important;
+            }
+            .site-header, .header-actions, .hero-actions, .contact-banner, .site-footer, #toast-container {
+                display: none !important;
+            }
+            .card, .hero-card, .metric-card {
+                background: #ffffff !important;
+                color: #0f172a !important;
+                border: 1px solid #cbd5e1 !important;
+                box-shadow: none !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            h1, h2, h3, h4, strong, span, p, li {
+                color: #0f172a !important;
+            }
+            .timeline::before {
+                background: #cbd5e1 !important;
+            }
+            .timeline-item::before {
+                background: #0891b2 !important;
+                box-shadow: 0 0 0 3px #ffffff !important;
+            }
+        }
+    </style>
+
+    <!-- Instant Theme Detection Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <!-- HEADER -->
-    <section class="bg-white py-20 shadow-sm">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h1 class="text-5xl font-bold">Jonathan Briones Lavados</h1>
-            <p class="text-xl text-gray-600 mt-4">Arquitecto Cloud • Líder Técnico • DevOps & FinOps</p>
-            
-        <div class="mt-6 flex justify-center space-x-6 text-gray-700">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="sr-only">Saltar al contenido principal</a>
 
-            <a href="https://linkedin.com/in/jonathan-patricio-briones-lavados"
-                target="_blank"
-                class="hover:text-blue-600 underline">
-                🔗 LinkedIn
-            </a>
+    <!-- ARIA Live Region for Screen Readers -->
+    <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
-            <a href="mailto:jbrionestecnico@gmail.com"
-                class="hover:text-blue-600 underline">
-                📧 jbrionestecnico@gmail.com
-            </a>
+    <!-- STICKY HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Brand -->
+                <a href="#" class="brand-logo" aria-label="Jonathan Briones — Inicio">
+                    <div class="brand-avatar">JB</div>
+                    <div class="brand-text">
+                        <h2>Jonathan Briones</h2>
+                        <span>Cloud & DevOps • SRE</span>
+                    </div>
+                </a>
 
-            <span>📍 Valladolid, España</span>
+                <!-- Nav -->
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                    <a href="#metricas" class="nav-link">Impacto</a>
+                    <a href="#experiencia" class="nav-link">Experiencia</a>
+                    <a href="#competencias" class="nav-link">Competencias</a>
+                    <a href="#certificaciones" class="nav-link">Certificaciones</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
 
-        </div>
+                <!-- Actions -->
+                <div class="header-actions">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle-btn" type="button" class="icon-btn" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">
+                        <!-- Sun Icon (shown in dark mode) -->
+                        <svg id="theme-icon-sun" style="width:1.25rem; height:1.25rem; display:none; color:#fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <!-- Moon Icon (shown in light mode) -->
+                        <svg id="theme-icon-moon" style="width:1.25rem; height:1.25rem; display:block; color:#334155;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
 
-        </div>
-    </section>
-
-    <!-- PERFIL PROFESIONAL -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6">Perfil Profesional</h2>
-            <p class="text-lg leading-relaxed text-gray-700">
-                Arquitecto de Soluciones Cloud, Líder Técnico y Backend Developer con más de
-                <strong>13 años de experiencia</strong> en diseño, implementación y modernización de
-                infraestructuras en <strong>AWS</strong>. Experto en automatización (CI/CD),
-                Kubernetes/Docker e Infrastructure as Code (Terraform/Ansible), con enfoque en
-                seguridad, observabilidad y optimización de costes (FinOps).
-                Líder de equipos multidisciplinares y proyectos de transformación digital.
-            </p>
-        </div>
-    </section>
-
-    <!-- COMPETENCIAS TÉCNICAS -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6">Competencias Técnicas</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700 text-lg">
-                <ul class="space-y-2">
-                    <li>✅ Cloud: AWS (EKS, EC2, S3, IAM), Azure (AKS, VM)</li>
-                    <li>✅ Contenedores: Docker, Kubernetes</li>
-                    <li>✅ DevOps / CI-CD: Jenkins, GitHub/GitLab CI</li>
-                    <li>✅ IaC: Terraform, Ansible, Chef</li>
-                </ul>
-                <ul class="space-y-2">
-                    <li>✅ Lenguajes: Node.js, Python, Golang, Ruby on Rails, React, PHP</li>
-                    <li>✅ Bases de datos: MySQL, PostgreSQL, MongoDB</li>
-                    <li>✅ Sistemas: Linux/Unix, Observabilidad avanzada</li>
-                    <li>✅ Automatización & Scripting: Bash</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCIA PROFESIONAL -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6">Experiencia Profesional</h2>
-
-            <div class="space-y-10 text-gray-700 text-lg">
-                <div>
-                    <h3 class="text-2xl font-semibold">Neardigital S.L., España — <span class="text-blue-600">Líder Técnico</span></h3>
-                    <p class="text-gray-500">2025 – presente</p>
-                    <ul class="list-disc ml-6 mt-2">
-                        <li>Liderazgo de equipo de operaciones Cloud AWS/Azure.</li>
-                        <li>Despliegue de arquitectura para aplicaciones con Terraform.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold">Cencosud S.A., Chile — <span class="text-blue-600">Líder Técnico / Arquitecto Cloud</span></h3>
-                    <p class="text-gray-500">2014 – 2025</p>
-                    <ul class="list-disc ml-6 mt-2">
-                        <li>Proyecto de reportería regional para el portal B2B.</li>
-                        <li>Diseño de soluciones SaaS (JumboPrime).</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold">Entel Chile — <span class="text-blue-600">Administrador Middleware</span></h3>
-                    <p class="text-gray-500">2010 – 2014</p>
-                    <ul class="list-disc ml-6 mt-2">
-                        <li>Administración de plataformas críticas.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold">Tinsa S.A., Chile — <span class="text-blue-600">Analista & Desarrollador</span></h3>
-                    <p class="text-gray-500">2008 – 2010</p>
-                    <ul class="list-disc ml-6 mt-2">
-                        <li>Desarrollo Full-Stack y levantamiento de requerimientos.</li>
-                    </ul>
+                    <!-- PDF Print -->
+                    <button onclick="window.print()" type="button" class="btn btn-primary" style="padding:0.45rem 0.9rem; font-size:0.8rem;" aria-label="Descargar o imprimir CV en PDF">
+                        <svg style="width:1rem; height:1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                        </svg>
+                        <span>PDF</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- FORMACIÓN -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6">Formación Académica</h2>
-            <ul class="text-lg text-gray-700 space-y-3">
-                <li>🎓 <strong>Diplomado Lean Enterprise</strong>, Universidad Católica — 2020–2021</li>
-                <li>🎓 <strong>Ingeniería de Ejecución en Informática</strong>, IP Santo Tomás — 2010–2015</li>
-            </ul>
-        </div>
-    </section>
+    <!-- MAIN BODY CONTENT -->
+    <main id="main-content" class="container" style="flex-grow:1;">
 
-    <!-- IDIOMAS -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6">Idiomas</h2>
-            <p class="text-lg text-gray-700">Español (nativo)</p>
-        </div>
-    </section>
+        <!-- HERO SECTION -->
+        <section id="sobre-mi" class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-card">
+                <div class="hero-layout">
+                    
+                    <!-- Text Info -->
+                    <div class="hero-content">
+                        <!-- Status Pill -->
+                        <div class="status-pill">
+                            <span class="status-dot"></span>
+                            <span>Disponible para nuevos retos & Liderazgo Cloud</span>
+                        </div>
+
+                        <!-- Name & Roles -->
+                        <h1 id="hero-title" class="hero-title">
+                            Jonathan Patricio <span class="gradient-text">Briones Lavados</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Senior Cloud & DevOps Engineer <span class="dot">•</span> Site Reliability Engineer (SRE) <span class="dot">•</span> AWS Cloud Architect
+                        </p>
+
+                        <!-- Summary -->
+                        <p class="hero-desc">
+                            Profesional con <strong>más de 13 años de experiencia</strong> en Cloud Computing, DevOps, Kubernetes, Terraform e Infrastructure as Code (IaC). Especialista liderando operaciones cloud, automatización de pipelines CI/CD, observabilidad avanzada, gestión de incidentes y plataformas críticas de alta disponibilidad con enfoque FinOps.
+                        </p>
+
+                        <!-- Contact Badges -->
+                        <div class="contact-badges">
+                            <!-- Location -->
+                            <div class="contact-pill">
+                                <svg style="width:1rem; height:1rem; color:var(--cyan-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Valladolid, España</span>
+                            </div>
+
+                            <!-- Phone -->
+                            <a href="tel:+34614215322" class="contact-pill" aria-label="Llamar al +34 614 215 322">
+                                <svg style="width:1rem; height:1rem; color:var(--cyan-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span>+34 614 215 322</span>
+                            </a>
+
+                            <!-- Copy Email -->
+                            <button id="copy-email-btn" type="button" class="contact-pill" data-email="jonathanpatricio.brioneslavados@gmail.com" aria-label="Copiar correo electrónico al portapapeles" title="Haz clic para copiar">
+                                <svg style="width:1rem; height:1rem; color:var(--cyan-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span id="email-label-text">jonathanpatricio.brioneslavados@gmail.com</span>
+                                <svg style="width:0.85rem; height:0.85rem; opacity:0.7;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/jonathan-patricio-briones-lavados" target="_blank" rel="noopener noreferrer" class="contact-pill contact-pill-blue" aria-label="LinkedIn">
+                                <svg style="width:0.95rem; height:0.95rem; fill:currentColor;" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/jonasbriones" target="_blank" rel="noopener noreferrer" class="contact-pill" aria-label="GitHub">
+                                <svg style="width:0.95rem; height:0.95rem; fill:currentColor;" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="hero-actions">
+                        <button onclick="window.print()" type="button" class="btn btn-primary">
+                            <svg style="width:1.15rem; height:1.15rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <span>Descargar CV (PDF)</span>
+                        </button>
+
+                        <a href="mailto:jonathanpatricio.brioneslavados@gmail.com" class="btn btn-secondary">
+                            <svg style="width:1.15rem; height:1.15rem; color:var(--cyan-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>Enviar Correo</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Metrics Bento -->
+            <div id="metricas" class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-val">+13 Años</div>
+                    <div class="metric-label">Experiencia en Cloud, DevOps, SRE e IaC</div>
+                </div>
+                <div class="metric-card blue">
+                    <div class="metric-val">-80% Incidentes</div>
+                    <div class="metric-label">Reducción operativa con Terraform e IaC</div>
+                </div>
+                <div class="metric-card emerald">
+                    <div class="metric-val">99.99% SLA</div>
+                    <div class="metric-label">Disponibilidad SaaS para +50.000 usuarios</div>
+                </div>
+                <div class="metric-card indigo">
+                    <div class="metric-val">+2M Reg/día</div>
+                    <div class="metric-label">Procesamiento serverless en AWS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA PROFESIONAL -->
+        <section id="experiencia" class="section-block" aria-labelledby="exp-title">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg style="width:1.4rem; height:1.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 id="exp-title" class="section-title">Experiencia Profesional</h2>
+                    <p class="section-subtitle">Trayectoria cuantificable en arquitectura de soluciones, liderazgo técnico y fiabilidad de sistemas</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Ayesa Digital -->
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Ayesa Digital</h3>
+                                <div class="role-title">Líder Técnico / Senior Cloud Architect</div>
+                            </div>
+                            <span class="date-badge">2025 – Actualidad</span>
+                        </div>
+
+                        <ul class="bullet-list">
+                            <li>Lidero operaciones <strong>AWS y Azure</strong> utilizando <strong>Terraform e Infrastructure as Code (IaC)</strong>, reduciendo un <strong>80%</strong> los incidentes diarios.</li>
+                            <li>Incrementé la productividad del equipo hasta <strong>120 tareas semanales</strong> mediante automatización de flujos y optimización operativa.</li>
+                            <li>Diseñé cuadros de mando integrales para <strong>observabilidad avanzada</strong> y seguimiento continuo de KPIs operacionales y costes.</li>
+                        </ul>
+
+                        <div class="tags-row">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">Terraform (IaC)</span>
+                            <span class="tech-tag">Observabilidad</span>
+                            <span class="tech-tag">KPIs & FinOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cencosud S.A. -->
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Cencosud S.A.</h3>
+                                <div class="role-title" style="color:var(--blue-accent);">Arquitecto Cloud / Líder Técnico</div>
+                            </div>
+                            <span class="date-badge">2014 – 2025</span>
+                        </div>
+
+                        <ul class="bullet-list">
+                            <li>Diseñé una plataforma serverless en <strong>AWS</strong> que procesa <strong>más de 2 millones de registros diarios</strong>.</li>
+                            <li>Reduje el tiempo de generación de informes un <strong>93,75%</strong>, pasando de <strong>4 horas a 15 minutos</strong>.</li>
+                            <li>Implementé una plataforma SaaS (JumboPrime) con disponibilidad del <strong>99,99%</strong> para <strong>más de 50.000 usuarios</strong>.</li>
+                            <li>Automaticé pipelines CI/CD para <strong>más de 20 microservicios</strong>, reduciendo los tiempos de despliegue de 60 a <strong>menos de 10 minutos</strong>.</li>
+                            <li>Administré plataformas críticas <strong>WebLogic y JBoss</strong> aplicando rigurosos principios de <strong>SRE y Alta Disponibilidad</strong>.</li>
+                            <li>Implementé automatizaciones de tareas rutinarias con <strong>Jenkins y Rundeck</strong>, mejorando radicalmente los tiempos de respuesta ante despliegues y solicitudes.</li>
+                        </ul>
+
+                        <div class="tags-row">
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">ECS / EKS</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">Rundeck</span>
+                            <span class="tech-tag">SRE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entel Chile -->
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Entel Chile</h3>
+                                <div class="role-title" style="color:var(--text-muted);">Middleware Administrator / SRE</div>
+                            </div>
+                            <span class="date-badge">2010 – 2014</span>
+                        </div>
+
+                        <ul class="bullet-list">
+                            <li>Implementé monitorización proactiva y gestión de incidentes (<strong>Incident Management</strong>) para servicios críticos de telecomunicaciones con <strong>New Relic</strong>.</li>
+                            <li>Validación, aceptación y reportes de pruebas de QA en plataformas de alta criticidad para cliente Banco de Chile.</li>
+                        </ul>
+
+                        <div class="tags-row">
+                            <span class="tech-tag">New Relic</span>
+                            <span class="tech-tag">Incident Management</span>
+                            <span class="tech-tag">Middleware</span>
+                            <span class="tech-tag">QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tinsa S.A. -->
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Tinsa S.A.</h3>
+                                <div class="role-title" style="color:var(--text-muted);">Analista y Desarrollador</div>
+                            </div>
+                            <span class="date-badge">2008 – 2010</span>
+                        </div>
+
+                        <ul class="bullet-list">
+                            <li>Desarrollé aplicaciones web dinámicas con <strong>Ruby on Rails, PHP, JavaScript y MySQL</strong>, participando activamente en el levantamiento de requerimientos funcionales.</li>
+                        </ul>
+
+                        <div class="tags-row">
+                            <span class="tech-tag">Ruby on Rails</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- COMPETENCIAS TÉCNICAS -->
+        <section id="competencias" class="section-block" aria-labelledby="skills-title">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg style="width:1.4rem; height:1.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 id="skills-title" class="section-title">Competencias Técnicas</h2>
+                    <p class="section-subtitle">Especialización en ecosistema Cloud nativo, automatización, fiabilidad e ingeniería de plataformas</p>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                
+                <!-- Cloud -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--cyan-bg); color:var(--cyan-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Cloud & Arquitectura</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">AWS (EKS, ECS, Lambda, EC2, S3, IAM)</span>
+                        <span class="skill-badge">Azure (AKS, VM)</span>
+                        <span class="skill-badge">Google Cloud (GCP)</span>
+                        <span class="skill-badge">Serverless Architecture</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--blue-bg); color:var(--blue-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">DevOps & SRE</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">CI/CD Pipelines</span>
+                        <span class="skill-badge">Jenkins</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">GitLab CI</span>
+                        <span class="skill-badge highlight">Site Reliability Engineering</span>
+                        <span class="skill-badge">Platform Engineering</span>
+                    </div>
+                </div>
+
+                <!-- IaC -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--indigo-bg); color:var(--indigo-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">IaC & Contenedores</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">Terraform</span>
+                        <span class="skill-badge highlight">Kubernetes (K8s)</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Ansible</span>
+                        <span class="skill-badge">Infrastructure as Code</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--emerald-bg); color:var(--emerald-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Lenguajes & Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">Python</span>
+                        <span class="skill-badge highlight">Go (Golang)</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Ruby on Rails</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">Bash Scripting</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--amber-bg); color:var(--amber-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Bases de Datos & Almacenamiento</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">PostgreSQL</span>
+                        <span class="skill-badge highlight">MongoDB</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">AWS S3 / EBS / EFS</span>
+                    </div>
+                </div>
+
+                <!-- Observability -->
+                <div class="card skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon" style="background:var(--purple-bg); color:var(--purple-accent);">
+                            <svg style="width:1.25rem; height:1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Observabilidad & Gestión</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge highlight">Observabilidad Avanzada</span>
+                        <span class="skill-badge">Incident Management</span>
+                        <span class="skill-badge">Linux / Unix Systems</span>
+                        <span class="skill-badge highlight">FinOps & Cost Optimization</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CERTIFICACIONES & FORMACIÓN -->
+        <section id="certificaciones" class="section-block" aria-labelledby="certs-title">
+            <div class="two-cols-grid">
+                
+                <!-- Certificaciones -->
+                <div>
+                    <div class="section-header">
+                        <div class="section-icon amber">
+                            <svg style="width:1.4rem; height:1.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 id="certs-title" class="section-title">Certificaciones</h2>
+                        </div>
+                    </div>
+
+                    <div class="list-stack">
+                        <!-- Cert 1 -->
+                        <div class="card cert-item">
+                            <div class="cert-info">
+                                <div class="cert-abbr" style="background:var(--amber-bg); color:var(--amber-text);">AWS</div>
+                                <div>
+                                    <div class="cert-title">AWS Certified Solutions Architect Associate</div>
+                                    <div class="cert-org">Amazon Web Services</div>
+                                </div>
+                            </div>
+                            <span class="badge-status" style="background:var(--amber-bg); color:var(--amber-text); border:1px solid var(--amber-border);">En preparación</span>
+                        </div>
+
+                        <!-- Cert 2 -->
+                        <div class="card cert-item">
+                            <div class="cert-info">
+                                <div class="cert-abbr" style="background:var(--indigo-bg); color:var(--indigo-text);">HC</div>
+                                <div>
+                                    <div class="cert-title">HashiCorp Terraform Associate</div>
+                                    <div class="cert-org">HashiCorp</div>
+                                </div>
+                            </div>
+                            <span class="badge-status" style="background:var(--indigo-bg); color:var(--indigo-text); border:1px solid var(--indigo-border);">En preparación</span>
+                        </div>
+
+                        <!-- Cert 3 -->
+                        <div class="card cert-item">
+                            <div class="cert-info">
+                                <div class="cert-abbr" style="background:var(--blue-bg); color:var(--blue-text);">ITIL</div>
+                                <div>
+                                    <div class="cert-title">ITIL Foundation</div>
+                                    <div class="cert-org">IT Service Management</div>
+                                </div>
+                            </div>
+                            <span class="badge-status" style="background:var(--blue-bg); color:var(--blue-text); border:1px solid var(--blue-border);">2012</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación & Idiomas -->
+                <div>
+                    <div class="section-header">
+                        <div class="section-icon emerald">
+                            <svg style="width:1.4rem; height:1.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="section-title">Formación Académica & Idiomas</h2>
+                        </div>
+                    </div>
+
+                    <div class="list-stack">
+                        <!-- Edu 1 -->
+                        <div class="card cert-item">
+                            <div>
+                                <div class="cert-title">Diplomado Lean Enterprise</div>
+                                <div class="cert-org">Pontificia Universidad Católica de Chile</div>
+                            </div>
+                            <span class="badge-status" style="background:var(--bg-badge); color:var(--text-title); border:1px solid var(--border-color);">2021</span>
+                        </div>
+
+                        <!-- Edu 2 -->
+                        <div class="card cert-item">
+                            <div>
+                                <div class="cert-title">Ingeniería de Ejecución en Informática</div>
+                                <div class="cert-org">IP Santo Tomás</div>
+                            </div>
+                            <span class="badge-status" style="background:var(--bg-badge); color:var(--text-title); border:1px solid var(--border-color);">2010 – 2015</span>
+                        </div>
+
+                        <!-- Idiomas -->
+                        <div class="card" style="padding:1rem;">
+                            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.6rem;">Idiomas</div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+                                <div style="display:flex; align-items:center; gap:0.5rem;">
+                                    <span style="font-size:1.25rem;">🇪🇸</span>
+                                    <div>
+                                        <div style="font-weight:600; font-size:0.875rem; color:var(--text-title);">Español</div>
+                                        <div style="font-size:0.75rem; color:var(--text-muted);">Nativo</div>
+                                    </div>
+                                </div>
+                                <div style="display:flex; align-items:center; gap:0.5rem;">
+                                    <span style="font-size:1.25rem;">🇬🇧</span>
+                                    <div>
+                                        <div style="font-weight:600; font-size:0.875rem; color:var(--text-title);">Inglés</div>
+                                        <div style="font-size:0.75rem; color:var(--text-muted);">Competencia técnica</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT BANNER -->
+        <section id="contacto" class="contact-banner">
+            <h2>¿Hablamos sobre cómo potenciar tu infraestructura Cloud & DevOps?</h2>
+            <p>Abierto a oportunidades de liderazgo técnico, arquitectura de soluciones y proyectos de transformación digital de alto impacto.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; margin-top:0.5rem;">
+                <a href="mailto:jonathanpatricio.brioneslavados@gmail.com" class="btn btn-primary">
+                    <svg style="width:1.15rem; height:1.15rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Enviar un Email</span>
+                </a>
+                <a href="https://linkedin.com/in/jonathan-patricio-briones-lavados" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <svg style="width:1.15rem; height:1.15rem; fill:currentColor;" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span>Conectar en LinkedIn</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="py-10 text-center bg-black text-gray-400 mt-20">
-        © 2026 Jonathan Briones — CV Profesional
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2026 Jonathan Patricio Briones Lavados. Todos los derechos reservados.</div>
+                <div style="display:flex; gap:1rem; align-items:center;">
+                    <span>Optimizado con accesibilidad WCAG 2.1 AA & SEO</span>
+                    <span>•</span>
+                    <a href="#sobre-mi" style="color:inherit; text-decoration:underline;">Volver arriba ↑</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            const sunIcon = document.getElementById('theme-icon-sun');
+            const moonIcon = document.getElementById('theme-icon-moon');
+            const metaTheme = document.getElementById('meta-theme-color');
+            const announcer = document.getElementById('a11y-announcer');
+
+            function syncThemeIcons(isDark) {
+                if (sunIcon && moonIcon) {
+                    sunIcon.style.display = isDark ? 'block' : 'none';
+                    moonIcon.style.display = isDark ? 'none' : 'block';
+                }
+            }
+
+            function applyTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    if (metaTheme) metaTheme.setAttribute('content', '#090d16');
+                    syncThemeIcons(true);
+                    if (announcer) announcer.textContent = 'Modo oscuro activado';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    if (metaTheme) metaTheme.setAttribute('content', '#f8fafc');
+                    syncThemeIcons(false);
+                    if (announcer) announcer.textContent = 'Modo claro activado';
+                }
+            }
+
+            // Init icons
+            const isInitiallyDark = document.documentElement.classList.contains('dark');
+            syncThemeIcons(isInitiallyDark);
+
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    const isDark = document.documentElement.classList.contains('dark');
+                    applyTheme(!isDark);
+                });
+            }
+
+            // Toast feedback
+            function showToast(msg) {
+                const container = document.getElementById('toast-container');
+                if (!container) return;
+                const toast = document.createElement('div');
+                toast.className = 'toast-msg';
+                toast.innerHTML = `
+                    <svg style="width:1rem; height:1rem; color:#22d3ee;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>${msg}</span>
+                `;
+                container.appendChild(toast);
+                requestAnimationFrame(() => toast.classList.add('show'));
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.remove(), 300);
+                }, 2800);
+            }
+
+            // Copy Email
+            const copyBtn = document.getElementById('copy-email-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', async () => {
+                    const email = copyBtn.getAttribute('data-email');
+                    try {
+                        await navigator.clipboard.writeText(email);
+                        showToast('Correo copiado al portapapeles');
+                        const lbl = document.getElementById('email-label-text');
+                        if (lbl) {
+                            const orig = lbl.textContent;
+                            lbl.textContent = '¡Copiado!';
+                            setTimeout(() => { lbl.textContent = orig; }, 2000);
+                        }
+                    } catch (e) {
+                        window.location.href = `mailto:${email}`;
+                    }
+                });
+            }
+
+            // Active nav indicator on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120;
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }, { passive: true });
+        });
+    </script>
 </body>
 </html>
