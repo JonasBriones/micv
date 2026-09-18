@@ -7,8 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: reemplaza por tu dominio real cuando lo tengas
-  site: 'https://tu-dominio.com',
+  site: 'https://jonathanbriones.com',
 
   vite: {
     plugins: [tailwindcss()]
