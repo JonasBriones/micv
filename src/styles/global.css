@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg: #faf7f2;
+  --color-bg-soft: #f2ece2;
+  --color-bg-card: #ffffff;
+  --color-ink: #1c1a17;
+  --color-ink-muted: #6b6459;
+  --color-line: #e4ddd0;
+  --color-accent: #1f3a5f;
+  --color-accent-light: #35577f;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #16140f;
+    --color-bg-soft: #1d1a15;
+    --color-bg-card: #211e19;
+    --color-ink: #f2ede4;
+    --color-ink-muted: #a89f8f;
+    --color-line: #33302a;
+    --color-accent: #6f9bc9;
+    --color-accent-light: #91b6dd;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #16140f;
+  --color-bg-soft: #1d1a15;
+  --color-bg-card: #211e19;
+  --color-ink: #f2ede4;
+  --color-ink-muted: #a89f8f;
+  --color-line: #33302a;
+  --color-accent: #6f9bc9;
+  --color-accent-light: #91b6dd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--color-ink);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.btn-ghost:hover {
+  background: var(--color-bg-soft);
+}
+
+.prose-post {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.prose-post :where(h2, h3) {
+  font-family: var(--font-display);
+}

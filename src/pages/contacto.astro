@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+// TODO: reemplaza por tus datos reales de contacto
+const email = 'tu@email.com';
+const linkedin = 'https://www.linkedin.com/in/tu-usuario';
+const github = 'https://github.com/tu-usuario';
+---
+<Layout title="Contacto — [Tu Nombre]" description="Hablemos de tecnología, negocios o alguna colaboración.">
+  <section class="wrap py-16">
+    <h1 class="font-display text-3xl font-semibold mb-4">Contacto</h1>
+    <p class="text-[var(--color-ink-muted)] max-w-xl mb-10">
+      Escríbeme si quieres hablar de negocios, tecnología, o si estás validando
+      con quién estás a punto de trabajar.
+    </p>
+
+    <div class="flex flex-col gap-4 max-w-sm">
+      <a href={`mailto:${email}`} class="btn btn-primary justify-center">Escríbeme un email</a>
+      <div class="flex gap-4 justify-center text-sm text-[var(--color-ink-muted)]">
+        <a href={linkedin} class="hover:text-[var(--color-accent)]">LinkedIn</a>
+        <a href={github} class="hover:text-[var(--color-accent)]">GitHub</a>
+      </div>
+    </div>
+  </section>
+</Layout>

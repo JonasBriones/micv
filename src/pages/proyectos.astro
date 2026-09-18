@@ -1,0 +1,44 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+interface Proyecto {
+  name: string;
+  description: string;
+  href?: string;
+}
+
+// TODO: ajusta la descripción de cada proyecto — sin detalle confidencial,
+// solo la mención de en qué consiste y tu rol.
+const proyectos: Proyecto[] = [
+  {
+    name: 'Pisuerga Digital',
+    description: 'Mi agencia. Desarrollo de producto y presencia digital para negocios locales.',
+    href: undefined
+  },
+  {
+    name: 'Sazón',
+    description: 'ERP para restaurantes — gestión de recetas, costes, inventario y equipo.',
+    href: undefined
+  }
+];
+---
+<Layout title="Proyectos — [Tu Nombre]" description="En qué estoy trabajando ahora mismo.">
+  <section class="wrap py-16">
+    <h1 class="font-display text-3xl font-semibold mb-4">Proyectos</h1>
+    <p class="text-[var(--color-ink-muted)] max-w-xl mb-10">
+      Cosas en las que trabajo hoy. Esta página es solo una mención — no opero
+      ninguno de estos proyectos desde aquí.
+    </p>
+
+    <ul class="space-y-8">
+      {proyectos.map((p) => (
+        <li class="border border-[var(--color-line)] rounded-2xl p-6 bg-[var(--color-bg-card)]">
+          <h2 class="font-display text-xl font-semibold">
+            {p.href ? <a href={p.href} class="hover:text-[var(--color-accent)]">{p.name}</a> : p.name}
+          </h2>
+          <p class="text-[var(--color-ink-muted)] mt-2">{p.description}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>
