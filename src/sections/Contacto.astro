@@ -1,0 +1,79 @@
+---
+import ContactRow from '@/components/ContactRow.astro';
+---
+<section id="contacto" class="scroll-mt-24 bg-accent px-5 py-20 text-bg sm:px-8 md:py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal grid gap-12 md:grid-cols-2 md:gap-16">
+      <div>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-bg/60">06 / Contacto</p>
+        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">¿Trabajamos juntos?</h2>
+        <p class="mt-5 max-w-md leading-relaxed text-bg/80">Abierto a colaboraciones en desarrollo de software y consultoría tecnológica: arquitectura cloud, DevOps, FinOps o liderazgo técnico de equipos.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:jbrionestecnico@gmail.com" class="rounded-full bg-bg px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg">Escribir email</a>
+          <a href="https://github.com/JonasBriones" target="_blank" rel="noopener noreferrer" class="rounded-full border border-bg/40 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg hover:bg-bg/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg">Ver GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <ContactRow label="Email" value="jbrionestecnico@gmail.com" copyValue="jbrionestecnico@gmail.com" />
+        <ContactRow label="Teléfono" value="614215322" href="tel:614215322" copyValue="614215322" />
+        <ContactRow
+          label="LinkedIn"
+          value="linkedin.com/in/jonathan-patricio-briones-lavados"
+          href="https://www.linkedin.com/in/jonathan-patricio-briones-lavados"
+          external={true}
+        />
+        <ContactRow label="GitHub" value="github.com/JonasBriones" href="https://github.com/JonasBriones" external={true} />
+        <p id="copy-status" class="h-5 pt-1 text-xs text-bg/70" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const status = document.getElementById('copy-status');
+  let statusTimer: number | undefined;
+
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const value = button.dataset.copy || '';
+      const reset = () => {
+        button.textContent = 'Copiar';
+        if (status) status.textContent = '';
+      };
+      const done = () => {
+        button.textContent = 'Copiado';
+        if (status) status.textContent = 'Dato copiado al portapapeles.';
+        window.clearTimeout(statusTimer);
+        statusTimer = window.setTimeout(reset, 2200);
+      };
+      const failed = () => {
+        if (status) status.textContent = 'No se pudo copiar. Selecciona el texto manualmente.';
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(value);
+          done();
+        } catch {
+          failed();
+        }
+      } else {
+        const input = document.createElement('textarea');
+        input.value = value;
+        input.setAttribute('readonly', '');
+        input.style.position = 'fixed';
+        input.style.opacity = '0';
+        document.body.appendChild(input);
+        input.select();
+        try {
+          (document as unknown as { execCommand: (commandId: string) => boolean }).execCommand('copy');
+          done();
+        } catch {
+          failed();
+        }
+        document.body.removeChild(input);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonathan Briones — Líder Técnico | Arquitectura Cloud | DevOps &amp; FinOps</title>
+  <meta name="description" content="Portafolio y CV de Jonathan Briones: Líder Técnico, Arquitecto Cloud y DevOps &amp; FinOps. Más de 13 años en AWS, Terraform, Kubernetes y liderazgo de equipos. Valladolid, España." />
+  <meta name="theme-color" content="#faf7f2" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f3a5f'/%3E%3Ctext x='50%25' y='55%25' font-family='Georgia,serif' font-size='28' fill='%23faf7f2' text-anchor='middle' dominant-baseline='middle'%3EJB%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#faf7f2',
+            soft: '#f2ece2',
+            card: '#ffffff',
+            ink: '#1c1a17',
+            muted: '#6b6459',
+            line: '#e4ddd0',
+            accent: '#1f3a5f',
+            'accent-light': '#35577f'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            card: '0 18px 50px -28px rgba(31, 58, 95, 0.28)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --paper: #faf7f2;
+      --soft: #f2ece2;
+      --ink: #1c1a17;
+      --muted: #6b6459;
+      --line: #e4ddd0;
+      --accent: #1f3a5f;
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    body { overflow-x: hidden; }
+    ::selection { background: var(--accent); color: #fff; }
+
+    /* Scroll reveal only when JS is available: content stays visible otherwise. */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    html.js .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* State styles live in CSS so they never depend on runtime-generated utilities. */
+    .nav-link { position: relative; transition: color .2s ease; }
+    .nav-link::after {
+      content: ""; position: absolute; left: 0; right: 100%; bottom: -6px;
+      height: 1px; background: var(--accent); transition: right .25s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after { right: 0; }
+    .nav-link.active { color: var(--accent); font-weight: 600; }
+
+    .tab-btn { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+    .tab-btn[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .tab-btn[aria-selected="false"]:hover { border-color: var(--accent); color: var(--accent); }
+
+    .acc-chevron { transition: transform .25s ease; }
+    .acc-trigger[aria-expanded="true"] .acc-chevron { transform: rotate(180deg); }
+    .acc-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .acc-panel > div { overflow: hidden; }
+    .acc-panel.open { grid-template-rows: 1fr; }
+
+    .stack-track { display: flex; width: max-content; animation: marquee 34s linear infinite; }
+    .stack-track:hover { animation-play-state: paused; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    .to-top { opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .25s ease, transform .25s ease; }
+    .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      html.js .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .stack-track { animation: none; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:z-[100] focus:top-3 focus:left-3 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white">Saltar al contenido</a>
+
+  <!-- ── Header ────────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+      <a href="#inicio" class="group flex shrink-0 items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Jonathan Briones — inicio">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent font-display text-sm font-semibold text-paper">JB</span>
+        <span class="whitespace-nowrap font-display text-lg font-semibold tracking-tight">Jonathan Briones</span>
+      </a>
+
+      <nav class="hidden items-center gap-5 text-sm lg:gap-8 md:flex" aria-label="Navegación principal">
+        <a class="nav-link text-muted hover:text-accent" href="#perfil">Perfil</a>
+        <a class="nav-link text-muted hover:text-accent" href="#stack">Stack</a>
+        <a class="nav-link text-muted hover:text-accent" href="#experiencia">Experiencia</a>
+        <a class="nav-link text-muted hover:text-accent" href="#proyectos">Proyectos</a>
+        <a class="nav-link text-muted hover:text-accent" href="#formacion">Formación</a>
+        <a href="#contacto" class="rounded-full border border-accent px-4 py-2 font-medium text-accent transition-colors hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Contacto</a>
+      </nav>
+
+      <button id="menu-btn" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line text-ink md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden border-t border-line bg-paper px-5 pb-5 pt-2 md:hidden" aria-label="Navegación móvil">
+      <a class="block border-b border-line py-3 text-sm text-muted" href="#perfil">Perfil</a>
+      <a class="block border-b border-line py-3 text-sm text-muted" href="#stack">Stack</a>
+      <a class="block border-b border-line py-3 text-sm text-muted" href="#experiencia">Experiencia</a>
+      <a class="block border-b border-line py-3 text-sm text-muted" href="#proyectos">Proyectos</a>
+      <a class="block border-b border-line py-3 text-sm text-muted" href="#formacion">Formación</a>
+      <a class="mt-4 block rounded-full bg-accent px-4 py-3 text-center text-sm font-medium text-white" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- ── Hero ────────────────────────────────────────────────────────── -->
+    <section id="inicio" class="scroll-mt-24">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-24">
+        <div class="reveal">
+          <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+            <span class="h-px w-8 bg-accent" aria-hidden="true"></span>
+            Líder Técnico · Arquitectura Cloud · DevOps &amp; FinOps
+          </p>
+          <h1 class="font-display text-4xl font-semibold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
+            Tecnología que <span class="text-accent underline decoration-accent/30 decoration-4 underline-offset-8">sostiene</span> el negocio.
+          </h1>
+          <p class="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            Arquitecto de Soluciones Cloud, Líder Técnico y Backend Developer con más de 13 años diseñando, implementando y modernizando infraestructuras en AWS. Automatización, Kubernetes e Infrastructure as Code con foco en seguridad, observabilidad y costes.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <a href="#experiencia" class="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-card transition-colors hover:bg-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Ver trayectoria</a>
+            <a href="#contacto" class="rounded-full border border-line bg-card px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Hablemos</a>
+          </div>
+          <div class="mt-9 flex flex-wrap gap-2 text-xs text-muted">
+            <span class="rounded-full border border-line bg-card px-3 py-1.5">Valladolid, España</span>
+            <span class="rounded-full border border-line bg-card px-3 py-1.5">Híbrido o remoto</span>
+            <span class="rounded-full border border-line bg-card px-3 py-1.5">13+ años en cloud</span>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:.1s">
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-[2rem] bg-soft" aria-hidden="true"></div>
+            <div class="relative rounded-2xl border border-line bg-card p-6 shadow-card sm:p-8">
+              <div class="mb-6 flex items-center gap-2 text-xs text-muted">
+                <span class="h-2.5 w-2.5 rounded-full bg-[#e0a458]" aria-hidden="true"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-[#c9c2b5]" aria-hidden="true"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-[#8fa68a]" aria-hidden="true"></span>
+                <span class="ml-2 font-sans">~/perfil</span>
+              </div>
+              <p class="font-mono text-xs text-accent">$ whoami</p>
+              <h2 class="mt-2 font-display text-2xl font-semibold leading-tight">Jonathan Briones Lavados</h2>
+              <p class="mt-2 text-sm leading-relaxed text-muted">Líder Técnico · Arquitecto Cloud · DevOps &amp; FinOps. Equipos multidisciplinares, proyectos críticos y transformación digital.</p>
+              <dl class="mt-7 space-y-3 border-t border-line pt-6 text-sm">
+                <div class="flex gap-4"><dt class="w-24 shrink-0 text-muted">Base</dt><dd>Valladolid (Castilla y León), España</dd></div>
+                <div class="flex gap-4"><dt class="w-24 shrink-0 text-muted">Modalidad</dt><dd>Híbrida o remota</dd></div>
+                <div class="flex gap-4"><dt class="w-24 shrink-0 text-muted">Idioma</dt><dd>Español nativo</dd></div>
+                <div class="flex gap-4"><dt class="w-24 shrink-0 text-muted">Enfoco</dt><dd>AWS, Terraform, Kubernetes, FinOps</dd></div>
+              </dl>
+              <a href="#contacto" class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                Disponible para colaborar
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech strip -->
+      <div class="overflow-hidden border-y border-line bg-soft py-4" aria-label="Tecnologías principales">
+        <div class="stack-track text-xs font-medium uppercase tracking-[0.18em] text-muted">
+          <div class="flex shrink-0 gap-8 pr-8">
+            <span>AWS</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>Ansible</span><span>Jenkins</span><span>Node.js</span><span>Python</span><span>Go</span><span>PostgreSQL</span>
+          </div>
+          <div class="flex shrink-0 gap-8 pr-8" aria-hidden="true">
+            <span>AWS</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>Ansible</span><span>Jenkins</span><span>Node.js</span><span>Python</span><span>Go</span><span>PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Perfil ──────────────────────────────────────────────────────── -->
+    <section id="perfil" class="scroll-mt-24 px-5 py-20 sm:px-8 md:py-28">
+      <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16">
+        <div class="reveal">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">01 / Perfil</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">De la arquitectura a la operación.</h2>
+          <div class="mt-6 space-y-5 leading-relaxed text-muted">
+            <p>Arquitecto de Soluciones Cloud, Líder Técnico y Backend Developer con más de 13 años de experiencia en diseño, implementación y modernización de infraestructuras en AWS. Experto en automatización (CI/CD), Kubernetes/Docker e Infrastructure as Code (Terraform/Ansible), con enfoque en seguridad, observabilidad y optimización de costes (FinOps).</p>
+            <p>Destacado por liderar equipos multidisciplinares y proyectos estratégicos de transformación digital, combinando la visión técnica con la comunicación efectiva con stakeholders.</p>
+          </div>
+        </div>
+
+        <div class="reveal grid gap-4 sm:grid-cols-2" style="transition-delay:.1s">
+          <article class="rounded-2xl border border-line bg-card p-6">
+            <span class="font-display text-2xl text-accent" aria-hidden="true">01</span>
+            <h3 class="mt-3 font-display text-lg font-semibold">Arquitectura Cloud</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Diseño e implementación de arquitecturas en AWS y Azure, con despliegues gestionados mediante Terraform.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-card p-6">
+            <span class="font-display text-2xl text-accent" aria-hidden="true">02</span>
+            <h3 class="mt-3 font-display text-lg font-semibold">DevOps &amp; CI/CD</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Pipelines de despliegue continuo con Jenkins y GitHub/GitLab CI; contenedores con Docker y Kubernetes.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-card p-6">
+            <span class="font-display text-2xl text-accent" aria-hidden="true">03</span>
+            <h3 class="mt-3 font-display text-lg font-semibold">FinOps &amp; observabilidad</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Optimización de costes, monitoreo y observabilidad avanzada en entornos Linux/Unix.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-card p-6">
+            <span class="font-display text-2xl text-accent" aria-hidden="true">04</span>
+            <h3 class="mt-3 font-display text-lg font-semibold">Liderazgo técnico</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Gestión de equipos, mentoría, orientación a resultados y proyectos críticos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Stack (interactive tabs) ────────────────────────────────────── -->
+    <section id="stack" class="scroll-mt-24 border-y border-line bg-soft px-5 py-20 sm:px-8 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">02 / Stack</p>
+            <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Competencias técnicas</h2>
+          </div>
+          <p class="text-sm text-muted">Selecciona una categoría para ver el detalle.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="mb-6 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0" role="tablist" aria-label="Categorías de competencias">
+            <div class="flex w-max gap-2">
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="true" aria-controls="panel-cloud" id="tab-cloud" data-tab="cloud">Cloud</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-contenedores" id="tab-contenedores" data-tab="contenedores">Contenedores</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-devops" id="tab-devops" data-tab="devops">DevOps &amp; CI/CD</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-iac" id="tab-iac" data-tab="iac">IaC &amp; Automatización</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-lenguajes" id="tab-lenguajes" data-tab="lenguajes">Lenguajes</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-datos" id="tab-datos" data-tab="datos">Datos &amp; Sistemas</button>
+              <button class="tab-btn rounded-full border border-line bg-card px-4 py-2 text-sm text-muted" role="tab" aria-selected="false" aria-controls="panel-liderazgo" id="tab-liderazgo" data-tab="liderazgo">Liderazgo</button>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-card p-6 sm:p-8">
+            <div role="tabpanel" id="panel-cloud" aria-labelledby="tab-cloud" data-panel="cloud">
+              <h3 class="font-display text-xl font-semibold">Cloud</h3>
+              <p class="mt-2 text-sm text-muted">AWS (EKS, EC2, S3, IAM) · Azure (AKS, VM, Storage, AAD)</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">AWS</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Amazon EKS</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">EC2</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">S3</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">IAM</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Azure</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">AKS</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Azure VM</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Storage</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">AAD</span></div>
+            </div>
+            <div role="tabpanel" id="panel-contenedores" aria-labelledby="tab-contenedores" data-panel="contenedores" hidden>
+              <h3 class="font-display text-xl font-semibold">Contenedores y orquestación</h3>
+              <p class="mt-2 text-sm text-muted">Docker, Kubernetes (AKS/EKS).</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Docker</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Kubernetes</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">AKS</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">EKS</span></div>
+            </div>
+            <div role="tabpanel" id="panel-devops" aria-labelledby="tab-devops" data-panel="devops" hidden>
+              <h3 class="font-display text-xl font-semibold">DevOps &amp; CI/CD</h3>
+              <p class="mt-2 text-sm text-muted">Jenkins, GitHub/GitLab CI, pipelines de despliegue continuo.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Jenkins</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">GitHub CI</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">GitLab CI</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Despliegue continuo</span></div>
+            </div>
+            <div role="tabpanel" id="panel-iac" aria-labelledby="tab-iac" data-panel="iac" hidden>
+              <h3 class="font-display text-xl font-semibold">IaC &amp; automatización</h3>
+              <p class="mt-2 text-sm text-muted">Terraform, Ansible, Chef, Bash scripting.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Terraform</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Ansible</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Chef</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Bash</span></div>
+            </div>
+            <div role="tabpanel" id="panel-lenguajes" aria-labelledby="tab-lenguajes" data-panel="lenguajes" hidden>
+              <h3 class="font-display text-xl font-semibold">Lenguajes y frameworks</h3>
+              <p class="mt-2 text-sm text-muted">Node.js, Python, Golang, Ruby on Rails, React, PHP.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Node.js</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Python</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Golang</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Ruby on Rails</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">React</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">PHP</span></div>
+            </div>
+            <div role="tabpanel" id="panel-datos" aria-labelledby="tab-datos" data-panel="datos" hidden>
+              <h3 class="font-display text-xl font-semibold">Bases de datos y sistemas</h3>
+              <p class="mt-2 text-sm text-muted">MySQL, PostgreSQL, MongoDB · Linux/Unix, monitoreo y observabilidad avanzada.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">MySQL</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">PostgreSQL</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">MongoDB</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Linux/Unix</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Observabilidad</span></div>
+            </div>
+            <div role="tabpanel" id="panel-liderazgo" aria-labelledby="tab-liderazgo" data-panel="liderazgo" hidden>
+              <h3 class="font-display text-xl font-semibold">Habilidades de liderazgo</h3>
+              <p class="mt-2 text-sm text-muted">Gestión de equipos técnicos y multidisciplinares, comunicación con stakeholders, mentoría y proyectos críticos.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Gestión de equipos</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Stakeholders</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Pensamiento estratégico</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Mentoría</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Proyectos críticos</span><span class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs">Transformación digital</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experiencia (accordion timeline) ────────────────────────────── -->
+    <section id="experiencia" class="scroll-mt-24 px-5 py-20 sm:px-8 md:py-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-12 max-w-2xl">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">03 / Experiencia</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Trayectoria</h2>
+          <p class="mt-4 text-muted">Pulsa cada rol para ver el detalle.</p>
+        </div>
+
+        <div class="reveal relative border-l border-line pl-6 sm:pl-8">
+          <article class="relative pb-8">
+            <span class="absolute -left-[31px] top-2 h-3 w-3 rounded-full bg-accent ring-4 ring-paper sm:-left-[39px]" aria-hidden="true"></span>
+            <button type="button" class="acc-trigger group flex w-full items-start justify-between gap-4 rounded-lg text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-expanded="true" aria-controls="acc-1">
+              <span>
+                <span class="block text-xs font-medium uppercase tracking-wider text-accent">2025 — presente · España</span>
+                <span class="mt-1 block font-display text-xl font-semibold group-hover:text-accent">Neardigital S.L.</span>
+                <span class="mt-0.5 block text-sm text-muted">Líder Técnico</span>
+              </span>
+              <svg class="acc-chevron mt-2 h-5 w-5 shrink-0 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <div id="acc-1" class="acc-panel open"><div><p class="pt-3 text-sm leading-relaxed text-muted">Liderazgo de equipo de operaciones Cloud AWS/Azure, con foco en despliegues de arquitectura para soporte de aplicaciones mediante Terraform.</p></div></div>
+          </article>
+
+          <article class="relative pb-8">
+            <span class="absolute -left-[31px] top-2 h-3 w-3 rounded-full bg-accent ring-4 ring-paper sm:-left-[39px]" aria-hidden="true"></span>
+            <button type="button" class="acc-trigger group flex w-full items-start justify-between gap-4 rounded-lg text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-expanded="false" aria-controls="acc-2">
+              <span>
+                <span class="block text-xs font-medium uppercase tracking-wider text-accent">2014 — 2025 · Chile</span>
+                <span class="mt-1 block font-display text-xl font-semibold group-hover:text-accent">Cencosud S.A.</span>
+                <span class="mt-0.5 block text-sm text-muted">Líder Técnico / Arquitecto Cloud</span>
+              </span>
+              <svg class="acc-chevron mt-2 h-5 w-5 shrink-0 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <div id="acc-2" class="acc-panel"><div><ul class="list-disc space-y-1.5 pt-3 pl-5 text-sm leading-relaxed text-muted"><li>Proyecto de reportería regional de ventas Portal B2B para Real State.</li><li>Proyecto SaaS Lean Startup, servicio basado en suscripción JumboPrime.</li></ul></div></div>
+          </article>
+
+          <article class="relative pb-8">
+            <span class="absolute -left-[31px] top-2 h-3 w-3 rounded-full bg-accent ring-4 ring-paper sm:-left-[39px]" aria-hidden="true"></span>
+            <button type="button" class="acc-trigger group flex w-full items-start justify-between gap-4 rounded-lg text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-expanded="false" aria-controls="acc-3">
+              <span>
+                <span class="block text-xs font-medium uppercase tracking-wider text-accent">2010 — 2014 · Chile</span>
+                <span class="mt-1 block font-display text-xl font-semibold group-hover:text-accent">Entel Chile S.A.</span>
+                <span class="mt-0.5 block text-sm text-muted">Administrador Middleware</span>
+              </span>
+              <svg class="acc-chevron mt-2 h-5 w-5 shrink-0 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <div id="acc-3" class="acc-panel"><div><p class="pt-3 text-sm leading-relaxed text-muted">Administración de plataformas middleware y continuidad de servicios críticos.</p></div></div>
+          </article>
+
+          <article class="relative">
+            <span class="absolute -left-[31px] top-2 h-3 w-3 rounded-full bg-accent ring-4 ring-paper sm:-left-[39px]" aria-hidden="true"></span>
+            <button type="button" class="acc-trigger group flex w-full items-start justify-between gap-4 rounded-lg text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-expanded="false" aria-controls="acc-4">
+              <span>
+                <span class="block text-xs font-medium uppercase tracking-wider text-accent">2008 — 2010 · Chile</span>
+                <span class="mt-1 block font-display text-xl font-semibold group-hover:text-accent">Tinsa S.A.</span>
+                <span class="mt-0.5 block text-sm text-muted">Analista y Desarrollador</span>
+              </span>
+              <svg class="acc-chevron mt-2 h-5 w-5 shrink-0 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <div id="acc-4" class="acc-panel"><div><p class="pt-3 text-sm leading-relaxed text-muted">Desarrollo Full-Stack y levantamiento de requerimientos para plataformas web.</p></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Proyectos ───────────────────────────────────────────────────── -->
+    <section id="proyectos" class="scroll-mt-24 border-y border-line bg-soft px-5 py-20 sm:px-8 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">04 / Proyectos</p>
+            <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">En los que trabajo hoy</h2>
+          </div>
+          <p class="max-w-md text-sm leading-relaxed text-muted">Mención de proyectos propios, sin detalle operativo.</p>
+        </div>
+
+        <div class="reveal grid gap-5 md:grid-cols-2">
+          <article class="group rounded-2xl border border-line bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-card">
+            <div class="flex items-start justify-between">
+              <span class="font-display text-3xl text-line" aria-hidden="true">01</span>
+              <span class="rounded-full border border-line bg-paper px-3 py-1 text-[11px] uppercase tracking-wider text-muted">pisuerga-digital</span>
+            </div>
+            <h3 class="mt-5 font-display text-2xl font-semibold group-hover:text-accent">Pisuerga Digital</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">Mi agencia. Desarrollo de producto y presencia digital para negocios locales.</p>
+          </article>
+          <article class="group rounded-2xl border border-line bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-card">
+            <div class="flex items-start justify-between">
+              <span class="font-display text-3xl text-line" aria-hidden="true">02</span>
+              <span class="rounded-full border border-line bg-paper px-3 py-1 text-[11px] uppercase tracking-wider text-muted">sazon-erp</span>
+            </div>
+            <h3 class="mt-5 font-display text-2xl font-semibold group-hover:text-accent">Sazón ERP</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">ERP para restaurantes — gestión de recetas, costes, inventario y equipo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Formación + disponibilidad ──────────────────────────────────── -->
+    <section id="formacion" class="scroll-mt-24 px-5 py-20 sm:px-8 md:py-24">
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-3 md:gap-8">
+        <div class="reveal">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">05 / Formación</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight">Formación académica</h2>
+          <ul class="mt-6 space-y-5">
+            <li class="border-l-2 border-accent pl-4">
+              <h3 class="font-display text-lg font-semibold">Diplomado Lean Enterprise</h3>
+              <p class="mt-1 text-sm text-muted">Universidad Católica · 2020 — 2021</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <h3 class="font-display text-lg font-semibold">Ingeniería de Ejecución en Informática</h3>
+              <p class="mt-1 text-sm text-muted">IP Santo Tomás · 2010 — 2015</p>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal" style="transition-delay:.08s">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">Idiomas</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight">Idiomas</h2>
+          <div class="mt-6 rounded-2xl border border-line bg-card p-6">
+            <p class="font-display text-lg font-semibold">Español</p>
+            <p class="mt-1 text-sm text-muted">Nativo</p>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay:.16s">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">Disponibilidad</p>
+          <h2 class="font-display text-3xl font-semibold tracking-tight">Dónde trabajar</h2>
+          <div class="mt-6 rounded-2xl bg-accent p-6 text-paper">
+            <p class="font-display text-lg font-semibold">Valladolid, España</p>
+            <p class="mt-2 text-sm text-paper/80">Castilla y León. Modalidad híbrida o remota.</p>
+            <a href="#contacto" class="mt-5 inline-flex items-center gap-2 text-sm font-medium underline underline-offset-4 hover:text-white">Abrir conversación <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contacto ────────────────────────────────────────────────────── -->
+    <section id="contacto" class="scroll-mt-24 bg-accent px-5 py-20 text-paper sm:px-8 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal grid gap-12 md:grid-cols-2 md:gap-16">
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-paper/60">06 / Contacto</p>
+            <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">¿Trabajamos juntos?</h2>
+            <p class="mt-5 max-w-md leading-relaxed text-paper/80">Abierto a colaboraciones en desarrollo de software y consultoría tecnológica: arquitectura cloud, DevOps, FinOps o liderazgo técnico de equipos.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="mailto:jbrionestecnico@gmail.com" class="rounded-full bg-paper px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper">Escribir email</a>
+              <a href="https://github.com/JonasBriones" target="_blank" rel="noopener noreferrer" class="rounded-full border border-paper/40 px-6 py-3 text-sm font-medium transition-colors hover:border-paper hover:bg-paper/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper">Ver GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-paper/20 bg-white/5 p-4">
+              <div class="min-w-0">
+                <p class="text-[11px] uppercase tracking-widest text-paper/60">Email</p>
+                <p class="mt-1 break-all text-sm">jbrionestecnico@gmail.com</p>
+              </div>
+              <button type="button" class="copy-btn shrink-0 rounded-full border border-paper/30 px-3 py-1.5 text-xs hover:bg-paper/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper" data-copy="jbrionestecnico@gmail.com" aria-label="Copiar email">Copiar</button>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-paper/20 bg-white/5 p-4">
+              <div class="min-w-0">
+                <p class="text-[11px] uppercase tracking-widest text-paper/60">Teléfono</p>
+                <p class="mt-1 text-sm"><a href="tel:614215322" class="hover:underline">614215322</a></p>
+              </div>
+              <button type="button" class="copy-btn shrink-0 rounded-full border border-paper/30 px-3 py-1.5 text-xs hover:bg-paper/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper" data-copy="614215322" aria-label="Copiar teléfono">Copiar</button>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-paper/20 bg-white/5 p-4">
+              <div class="min-w-0">
+                <p class="text-[11px] uppercase tracking-widest text-paper/60">LinkedIn</p>
+                <a class="mt-1 block break-all text-sm hover:underline" href="https://www.linkedin.com/in/jonathan-patricio-briones-lavados" target="_blank" rel="noopener noreferrer">linkedin.com/in/jonathan-patricio-briones-lavados ↗</a>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-paper/20 bg-white/5 p-4">
+              <div class="min-w-0">
+                <p class="text-[11px] uppercase tracking-widest text-paper/60">GitHub</p>
+                <a class="mt-1 block break-all text-sm hover:underline" href="https://github.com/JonasBriones" target="_blank" rel="noopener noreferrer">github.com/JonasBriones ↗</a>
+              </div>
+            </div>
+            <p id="copy-status" class="h-5 pt-1 text-xs text-paper/70" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-paper px-5 py-8 sm:px-8">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row">
+      <p>© 2026 Jonathan Briones · Valladolid, España</p>
+      <p>Diseño propio: Fraunces + Inter, fondo papel y azul marino. Web personal separada de Pisuerga Digital y Sazón.</p>
+    </div>
+  </footer>
+
+  <button id="to-top" type="button" class="to-top fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-accent text-paper shadow-card" aria-label="Volver arriba">
+    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6" /></svg>
+  </button>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Mobile menu
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', function () {
+        var open = menu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.setAttribute('aria-label', 'Abrir menú');
+        });
+      });
+
+      // Skill tabs (click + arrow keys)
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('[role="tabpanel"]'));
+      function selectTab(tab, focus) {
+        tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t === tab)); t.tabIndex = t === tab ? 0 : -1; });
+        panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== tab.getAttribute('data-tab'); });
+        if (focus) tab.focus();
+      }
+      tabs.forEach(function (tab, i) {
+        tab.tabIndex = tab.getAttribute('aria-selected') === 'true' ? 0 : -1;
+        tab.addEventListener('click', function () { selectTab(tab, false); });
+        tab.addEventListener('keydown', function (e) {
+          var next = null;
+          if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+          if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+          if (e.key === 'Home') next = tabs[0];
+          if (e.key === 'End') next = tabs[tabs.length - 1];
+          if (next) { e.preventDefault(); selectTab(next, true); }
+        });
+      });
+
+      // Experience accordion
+      document.querySelectorAll('.acc-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+          var expanded = trigger.getAttribute('aria-expanded') === 'true';
+          trigger.setAttribute('aria-expanded', String(!expanded));
+          panel.classList.toggle('open', !expanded);
+        });
+      });
+
+      // Copy contact details
+      var status = document.getElementById('copy-status');
+      var statusTimer;
+      document.querySelectorAll('.copy-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var value = btn.getAttribute('data-copy');
+          var done = function () {
+            btn.textContent = 'Copiado';
+            status.textContent = 'Dato copiado al portapapeles.';
+            clearTimeout(statusTimer);
+            statusTimer = setTimeout(function () {
+              btn.textContent = 'Copiar';
+              status.textContent = '';
+            }, 2200);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(value).then(done).catch(function () { status.textContent = 'No se pudo copiar. Selecciona el texto manualmente.'; });
+          } else {
+            var input = document.createElement('textarea');
+            input.value = value; input.setAttribute('readonly', '');
+            input.style.position = 'fixed'; input.style.opacity = '0';
+            document.body.appendChild(input); input.select();
+            try { document.execCommand('copy'); done(); }
+            catch (err) { status.textContent = 'No se pudo copiar. Selecciona el texto manualmente.'; }
+            document.body.removeChild(input);
+          }
+        });
+      });
+
+      // Scroll reveal + active section highlight
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+      var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        var sectionObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); });
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(function (s) { sectionObserver.observe(s); });
+      }
+
+      // Back to top
+      var toTop = document.getElementById('to-top');
+      function onScroll() { toTop.classList.toggle('show', window.scrollY > 600); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+  </script>
+</body>
+</html>

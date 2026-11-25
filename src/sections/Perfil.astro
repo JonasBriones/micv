@@ -1,0 +1,42 @@
+---
+import AptitudeCard from '@/components/AptitudeCard.astro';
+
+const aptitudes = [
+  {
+    num: '01',
+    title: 'Arquitectura Cloud',
+    body: 'Diseño e implementación de arquitecturas en AWS y Azure, con despliegues gestionados mediante Terraform.'
+  },
+  {
+    num: '02',
+    title: 'DevOps & CI/CD',
+    body: 'Pipelines de despliegue continuo con Jenkins y GitHub/GitLab CI; contenedores con Docker y Kubernetes.'
+  },
+  {
+    num: '03',
+    title: 'FinOps & observabilidad',
+    body: 'Optimización de costes, monitoreo y observabilidad avanzada en entornos Linux/Unix.'
+  },
+  {
+    num: '04',
+    title: 'Liderazgo técnico',
+    body: 'Gestión de equipos, mentoría, orientación a resultados y proyectos críticos.'
+  }
+];
+---
+<section id="perfil" class="scroll-mt-24 px-5 py-20 sm:px-8 md:py-28">
+  <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16">
+    <div class="reveal">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">01 / Perfil</p>
+      <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">De la arquitectura a la operación.</h2>
+      <div class="mt-6 space-y-5 leading-relaxed text-ink-muted">
+        <p>Arquitecto de Soluciones Cloud, Líder Técnico y Backend Developer con más de 13 años de experiencia en diseño, implementación y modernización de infraestructuras en AWS. Experto en automatización (CI/CD), Kubernetes/Docker e Infrastructure as Code (Terraform/Ansible), con enfoque en seguridad, observabilidad y optimización de costes (FinOps).</p>
+        <p>Destacado por liderar equipos multidisciplinares y proyectos estratégicos de transformación digital, combinando la visión técnica con la comunicación efectiva con stakeholders.</p>
+      </div>
+    </div>
+
+    <div class="reveal grid gap-4 sm:grid-cols-2" style="transition-delay:.1s">
+      {aptitudes.map((aptitude) => <AptitudeCard {...aptitude} />)}
+    </div>
+  </div>
+</section>

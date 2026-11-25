@@ -13,6 +13,8 @@
 
   --font-display: "Fraunces", "Georgia", serif;
   --font-sans: "Inter", system-ui, sans-serif;
+
+  --shadow-card: 0 18px 50px -28px rgba(31, 58, 95, 0.28);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +43,123 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Scroll reveal only when JS is available: content stays visible otherwise. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+html.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Interactive states live in CSS so they never depend on runtime utilities. */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -6px;
+  height: 1px;
+  background: var(--color-accent);
+  transition: right 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  right: 0;
+}
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.tab-btn {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.tab-btn[aria-selected="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.tab-btn[aria-selected="false"]:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.acc-chevron {
+  transition: transform 0.25s ease;
+}
+.acc-trigger[aria-expanded="true"] .acc-chevron {
+  transform: rotate(180deg);
+}
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.acc-panel > div {
+  overflow: hidden;
+}
+.acc-panel.open {
+  grid-template-rows: 1fr;
+}
+
+.stack-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+.stack-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .stack-track {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -50,14 +169,20 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-h1, h2, h3, h4, .font-display {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-a {
-  color: var(--color-accent);
+.font-display {
+  font-family: var(--font-display);
+}
+
+@layer base {
+  a {
+    color: var(--color-accent);
+  }
 }
 
 .wrap {

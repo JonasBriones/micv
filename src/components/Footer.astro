@@ -1,14 +1,23 @@
 ---
 const year = new Date().getFullYear();
+const isHome = Astro.url.pathname === '/';
 ---
-<footer class="border-t border-[var(--color-line)] mt-16">
-  <div class="wrap py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-[var(--color-ink-muted)]">
-    <p>&copy; {year} [Tu Nombre]. Escrito desde Valladolid.</p>
-    <div class="flex gap-4">
-      <!-- TODO: reemplazar por tus redes reales -->
-      <a href="https://www.linkedin.com/in/tu-usuario" class="hover:text-[var(--color-accent)]">LinkedIn</a>
-      <a href="https://github.com/tu-usuario" class="hover:text-[var(--color-accent)]">GitHub</a>
-      <a href="/contacto" class="hover:text-[var(--color-accent)]">Contacto</a>
+{isHome ? (
+  <footer class="bg-bg px-5 py-8 sm:px-8">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-3 border-t border-line pt-6 text-xs text-ink-muted sm:flex-row">
+      <p>© {year} Jonathan Briones · Valladolid, España</p>
+      <p>Diseño propio: Fraunces + Inter, fondo papel y azul marino. Web personal separada de Pisuerga Digital y Sazón.</p>
     </div>
-  </div>
-</footer>
+  </footer>
+) : (
+  <footer class="mt-16 border-t border-line">
+    <div class="wrap flex flex-col items-center justify-between gap-3 py-8 text-sm text-ink-muted sm:flex-row">
+      <p>&copy; {year} Jonathan Briones. Escrito desde Valladolid.</p>
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/jonathan-patricio-briones-lavados" class="hover:text-accent" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/JonasBriones" class="hover:text-accent" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="/contacto" class="hover:text-accent">Contacto</a>
+      </div>
+    </div>
+  </footer>
+)}

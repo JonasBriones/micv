@@ -1,0 +1,121 @@
+---
+const categories = [
+  {
+    key: 'cloud',
+    label: 'Cloud',
+    title: 'Cloud',
+    description: 'AWS (EKS, EC2, S3, IAM) · Azure (AKS, VM, Storage, AAD)',
+    skills: ['AWS', 'Amazon EKS', 'EC2', 'S3', 'IAM', 'Azure', 'AKS', 'Azure VM', 'Storage', 'AAD']
+  },
+  {
+    key: 'contenedores',
+    label: 'Contenedores',
+    title: 'Contenedores y orquestación',
+    description: 'Docker, Kubernetes (AKS/EKS).',
+    skills: ['Docker', 'Kubernetes', 'AKS', 'EKS']
+  },
+  {
+    key: 'devops',
+    label: 'DevOps & CI/CD',
+    title: 'DevOps & CI/CD',
+    description: 'Jenkins, GitHub/GitLab CI, pipelines de despliegue continuo.',
+    skills: ['Jenkins', 'GitHub CI', 'GitLab CI', 'Despliegue continuo']
+  },
+  {
+    key: 'iac',
+    label: 'IaC & Automatización',
+    title: 'IaC & automatización',
+    description: 'Terraform, Ansible, Chef, Bash scripting.',
+    skills: ['Terraform', 'Ansible', 'Chef', 'Bash']
+  },
+  {
+    key: 'lenguajes',
+    label: 'Lenguajes',
+    title: 'Lenguajes y frameworks',
+    description: 'Node.js, Python, Golang, Ruby on Rails, React, PHP.',
+    skills: ['Node.js', 'Python', 'Golang', 'Ruby on Rails', 'React', 'PHP']
+  },
+  {
+    key: 'datos',
+    label: 'Datos & Sistemas',
+    title: 'Bases de datos y sistemas',
+    description: 'MySQL, PostgreSQL, MongoDB · Linux/Unix, monitoreo y observabilidad avanzada.',
+    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Linux/Unix', 'Observabilidad']
+  },
+  {
+    key: 'liderazgo',
+    label: 'Liderazgo',
+    title: 'Habilidades de liderazgo',
+    description: 'Gestión de equipos técnicos y multidisciplinares, comunicación con stakeholders, mentoría y proyectos críticos.',
+    skills: ['Gestión de equipos', 'Stakeholders', 'Pensamiento estratégico', 'Mentoría', 'Proyectos críticos', 'Transformación digital']
+  }
+];
+---
+<div class="mb-6 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0" role="tablist" aria-label="Categorías de competencias">
+  <div class="flex w-max gap-2">
+    {categories.map((category, index) => (
+      <button
+        class="tab-btn rounded-full border border-line bg-bg-card px-4 py-2 text-sm text-ink-muted"
+        role="tab"
+        aria-selected={index === 0 ? 'true' : 'false'}
+        aria-controls={`panel-${category.key}`}
+        id={`tab-${category.key}`}
+        data-tab={category.key}
+        tabindex={index === 0 ? 0 : -1}
+      >{category.label}</button>
+    ))}
+  </div>
+</div>
+
+<div class="rounded-2xl border border-line bg-bg-card p-6 sm:p-8">
+  {categories.map((category, index) => (
+    <div
+      role="tabpanel"
+      id={`panel-${category.key}`}
+      aria-labelledby={`tab-${category.key}`}
+      data-panel={category.key}
+      hidden={index !== 0}
+    >
+      <h3 class="font-display text-xl font-semibold">{category.title}</h3>
+      <p class="mt-2 text-sm text-ink-muted">{category.description}</p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        {category.skills.map((skill) => (
+          <span class="rounded-full border border-line bg-bg px-3 py-1.5 text-xs">{skill}</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
+
+  function selectTab(tab: HTMLButtonElement, focus: boolean) {
+    tabs.forEach((t) => {
+      const selected = t === tab;
+      t.setAttribute('aria-selected', String(selected));
+      t.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach((panel) => {
+      panel.hidden = panel.getAttribute('data-panel') !== tab.getAttribute('data-tab');
+    });
+    if (focus) tab.focus();
+  }
+
+  tabs.forEach((tab, i) => {
+    tab.tabIndex = tab.getAttribute('aria-selected') === 'true' ? 0 : -1;
+    tab.addEventListener('click', () => selectTab(tab, false));
+    tab.addEventListener('keydown', (event) => {
+      let next: HTMLButtonElement | undefined;
+      if (event.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      if (event.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (event.key === 'Home') next = tabs[0];
+      if (event.key === 'End') next = tabs[tabs.length - 1];
+      if (next) {
+        event.preventDefault();
+        selectTab(next, true);
+      }
+    });
+  });
+</script>

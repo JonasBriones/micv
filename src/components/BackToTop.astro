@@ -1,0 +1,13 @@
+<button id="to-top" type="button" class="to-top fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-accent text-bg shadow-card" aria-label="Volver arriba">
+  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6" /></svg>
+</button>
+
+<script>
+  const toTop = document.getElementById('to-top') as HTMLButtonElement | null;
+  if (toTop) {
+    const onScroll = () => toTop.classList.toggle('show', window.scrollY > 600);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+</script>

@@ -1,0 +1,13 @@
+---
+const techs = ['AWS', 'Azure', 'Terraform', 'Kubernetes', 'Docker', 'Ansible', 'Jenkins', 'Node.js', 'Python', 'Go', 'PostgreSQL'];
+---
+<div class="overflow-hidden border-y border-line bg-bg-soft py-4" aria-label="Tecnologías principales">
+  <div class="stack-track text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
+    <div class="flex shrink-0 gap-8 pr-8">
+      {techs.map((tech) => <span>{tech}</span>)}
+    </div>
+    <div class="flex shrink-0 gap-8 pr-8" aria-hidden="true">
+      {techs.map((tech) => <span>{tech}</span>)}
+    </div>
+  </div>
+</div>

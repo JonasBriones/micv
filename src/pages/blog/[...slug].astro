@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
-<Layout title={`${post.data.title} — [Tu Nombre]`} description={post.data.description}>
+<Layout title={`${post.data.title} — Jonathan Briones`} description={post.data.description}>
   <article class="wrap py-16">
     <a href="/blog" class="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-accent)]">← Volver al blog</a>
 

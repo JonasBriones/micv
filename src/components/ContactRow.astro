@@ -1,0 +1,25 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  href?: string;
+  external?: boolean;
+  copyValue?: string;
+}
+const { label, value, href, external = false, copyValue } = Astro.props;
+---
+<div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-bg/20 bg-white/5 p-4">
+  <div class="min-w-0">
+    <p class="text-[11px] uppercase tracking-widest text-bg/60">{label}</p>
+    {href ? (
+      <a class="mt-1 block break-all text-sm text-bg hover:underline" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+        {value}{external && <span aria-hidden="true"> ↗</span>}
+      </a>
+    ) : (
+      <p class="mt-1 break-all text-sm">{value}</p>
+    )}
+  </div>
+  {copyValue && (
+    <button type="button" class="copy-btn shrink-0 rounded-full border border-bg/30 px-3 py-1.5 text-xs hover:bg-bg/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg" data-copy={copyValue} aria-label={`Copiar ${label.toLowerCase()}`}>Copiar</button>
+  )}
+</div>

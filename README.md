@@ -6,7 +6,7 @@ azul marino) — deliberadamente distinto del branding de esos dos proyectos.
 
 ## Estructura
 
-- `/` — Home, frase potente + últimas notas del blog.
+- `/` — Home / one-page CV: Hero, Perfil, Stack, Experiencia, Proyectos, Formación y Contacto.
 - `/sobre-mi` — Bio/CV.
 - `/blog` — Listado, contenido en `src/content/blog/*.md`.
 - `/proyectos` — Mención de Pisuerga Digital / Sazón, sin detalle operativo.
@@ -16,13 +16,13 @@ azul marino) — deliberadamente distinto del branding de esos dos proyectos.
 
 Todo lo marcado con `[Tu Nombre]` o `TODO` es contenido de ejemplo:
 
-- [ ] Nombre real en `Layout.astro`, `Header.astro`, `Footer.astro`, y el `title`/`description` de cada página.
-- [ ] Frase potente del Home (`src/pages/index.astro`).
-- [ ] Bio real en `src/pages/sobre-mi.astro`.
-- [ ] Email y redes reales en `src/pages/contacto.astro` y `Footer.astro`.
+- [x] Nombre real en `Layout.astro`, `Header.astro`, `Footer.astro`, y el `title`/`description` de cada página.
+- [x] Frase potente del Home (`src/pages/index.astro`).
+- [x] Bio real en `src/pages/sobre-mi.astro`.
+- [x] Email y redes reales en `src/pages/contacto.astro` y `Footer.astro`.
 - [ ] Dominio real en `astro.config.mjs` (`site:`) y `public/robots.txt`.
 - [ ] Borrar o reemplazar el post de ejemplo `src/content/blog/bienvenida.md`.
-- [ ] Favicon propio (hoy usa el de Astro por defecto, en `public/`).
+- [x] Favicon propio (JB, azul marino sobre papel).
 
 ## Comandos
 

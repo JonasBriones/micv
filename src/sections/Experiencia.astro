@@ -1,0 +1,60 @@
+---
+import TimelineItem from '@/components/TimelineItem.astro';
+---
+<section id="experiencia" class="scroll-mt-24 px-5 py-20 sm:px-8 md:py-28">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mb-12 max-w-2xl">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">03 / Experiencia</p>
+      <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Trayectoria</h2>
+      <p class="mt-4 text-ink-muted">Pulsa cada rol para ver el detalle.</p>
+    </div>
+
+    <div class="reveal relative border-l border-line pl-6 sm:pl-8">
+      <TimelineItem
+        period="2025 — presente · España"
+        company="Neardigital S.L."
+        role="Líder Técnico"
+        panelId="acc-1"
+        body="Liderazgo de equipo de operaciones Cloud AWS/Azure, con foco en despliegues de arquitectura para soporte de aplicaciones mediante Terraform."
+        expanded={true}
+      />
+      <TimelineItem
+        period="2014 — 2025 · Chile"
+        company="Cencosud S.A."
+        role="Líder Técnico / Arquitecto Cloud"
+        panelId="acc-2"
+        items={[
+          'Proyecto de reportería regional de ventas Portal B2B para Real State.',
+          'Proyecto SaaS Lean Startup, servicio basado en suscripción JumboPrime.'
+        ]}
+      />
+      <TimelineItem
+        period="2010 — 2014 · Chile"
+        company="Entel Chile S.A."
+        role="Administrador Middleware"
+        panelId="acc-3"
+        body="Administración de plataformas middleware y continuidad de servicios críticos."
+      />
+      <TimelineItem
+        period="2008 — 2010 · Chile"
+        company="Tinsa S.A."
+        role="Analista y Desarrollador"
+        panelId="acc-4"
+        body="Desarrollo Full-Stack y levantamiento de requerimientos para plataformas web."
+        last={true}
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.acc-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const panel = document.getElementById(trigger.getAttribute('aria-controls') || '');
+      if (!panel) return;
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', String(!expanded));
+      panel.classList.toggle('open', !expanded);
+    });
+  });
+</script>

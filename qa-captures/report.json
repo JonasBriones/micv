@@ -1,0 +1,120 @@
+{
+  "viewports": [
+    {
+      "name": "1440",
+      "width": 1440,
+      "height": 900,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflowCount": 0,
+      "clippedMarqueeOrTabOverflow": 12,
+      "overflowSample": [],
+      "bodyBg": "rgb(250, 247, 242)",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "h1Font": "Fraunces, Georgia, serif",
+      "h1Size": "60px",
+      "fraunces": true,
+      "inter": true,
+      "title": "Jonathan Briones — Líder Técnico | Arquitectura Cloud | DevOps & FinOps",
+      "sections": [
+        "inicio",
+        "perfil",
+        "stack",
+        "experiencia",
+        "proyectos",
+        "formacion",
+        "contacto"
+      ],
+      "tabs": 7,
+      "panels": 7,
+      "hiddenPanels": 6,
+      "timelineItems": 4,
+      "copyButtons": 2,
+      "placeholdersInDom": false,
+      "tokensApplied": true,
+      "revealNotVisible": 0,
+      "errors": []
+    },
+    {
+      "name": "768",
+      "width": 768,
+      "height": 1024,
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflowCount": 0,
+      "clippedMarqueeOrTabOverflow": 21,
+      "overflowSample": [],
+      "bodyBg": "rgb(250, 247, 242)",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "h1Font": "Fraunces, Georgia, serif",
+      "h1Size": "48px",
+      "fraunces": true,
+      "inter": true,
+      "title": "Jonathan Briones — Líder Técnico | Arquitectura Cloud | DevOps & FinOps",
+      "sections": [
+        "inicio",
+        "perfil",
+        "stack",
+        "experiencia",
+        "proyectos",
+        "formacion",
+        "contacto"
+      ],
+      "tabs": 7,
+      "panels": 7,
+      "hiddenPanels": 6,
+      "timelineItems": 4,
+      "copyButtons": 2,
+      "placeholdersInDom": false,
+      "tokensApplied": true,
+      "revealNotVisible": 0,
+      "errors": []
+    }
+  ],
+  "consoleErrors": [],
+  "interaction": {
+    "tabs": {
+      "datosSelected": "true",
+      "datosPanelVisible": true,
+      "cloudPanelHidden": true
+    },
+    "tabsKeyboard": {
+      "selected": "tab-contenedores",
+      "activeElement": "tab-contenedores"
+    },
+    "tabsEnd": "tab-liderazgo",
+    "accordion": {
+      "expanded": "true",
+      "open": true,
+      "rows": "63.5px"
+    },
+    "backToTopVisible": true,
+    "navActive": [
+      "#stack"
+    ],
+    "headerAt768": {
+      "desktopNavVisible": true,
+      "hamburgerVisible": false
+    },
+    "mobileMenuOpen": {
+      "visible": true,
+      "expanded": "true"
+    },
+    "mobileMenuClosedOnNav": {
+      "hidden": true,
+      "expanded": "false"
+    },
+    "mobileOverflow": {
+      "inner": 390,
+      "scroll": 390
+    },
+    "copy": {
+      "status": "Dato copiado al portapapeles.",
+      "clipboard": "jbrionestecnico@gmail.com"
+    },
+    "mobileErrors": []
+  },
+  "checks": {}
+}
