@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const site = Astro.site?.href ?? 'https://jonathanbriones.com';
+---
+<Layout
+  title="Página no encontrada — Jonathan Briones"
+  description="La página que buscas no existe o ha cambiado de ubicación."
+  canonical={site}
+  noindex
+>
+  <section class="wrap py-16">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Error 404</p>
+    <h1 class="font-display text-3xl sm:text-4xl font-semibold mt-4">Esta página no existe</h1>
+    <p class="text-ink-muted max-w-xl mt-4">
+      Puede que la dirección haya cambiado o que el enlace esté mal escrito.
+      Puedes volver al inicio, leer el blog o escribirme directamente.
+    </p>
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+      <a href="/blog" class="btn btn-ghost">Ir al blog</a>
+      <a href="/contacto" class="btn btn-ghost">Contacto</a>
+    </div>
+  </section>
+</Layout>

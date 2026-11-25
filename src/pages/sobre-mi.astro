@@ -1,7 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { personSchema, profilePageSchema } from '@/lib/schema';
+
+const site = Astro.site?.href ?? 'https://jonathanbriones.com';
+const pageUrl = new URL(Astro.url.pathname, site).href;
 ---
-<Layout title="Sobre mí — Jonathan Briones" description="Trayectoria de Jonathan Briones: Líder Técnico, Arquitectura Cloud, DevOps y FinOps. Más de 13 años en AWS e infraestructura como código.">
+<Layout
+  title="Sobre mí — Jonathan Briones"
+  description="Trayectoria de Jonathan Briones: 13+ años en AWS, Azure, Terraform y Kubernetes. Liderazgo técnico, DevOps y FinOps desde Valladolid."
+  ogType="profile"
+  jsonLd={[personSchema(site), profilePageSchema(pageUrl, site)]}
+>
   <section class="wrap py-16">
     <h1 class="font-display text-3xl font-semibold mb-8">Sobre mí</h1>
 

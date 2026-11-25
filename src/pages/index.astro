@@ -7,8 +7,17 @@ import Experiencia from '@/sections/Experiencia.astro';
 import Proyectos from '@/sections/Proyectos.astro';
 import Formacion from '@/sections/Formacion.astro';
 import Contacto from '@/sections/Contacto.astro';
+import { personSchema, profilePageSchema } from '@/lib/schema';
+
+const site = Astro.site?.href ?? 'https://jonathanbriones.com';
+const pageUrl = new URL(Astro.url.pathname, site).href;
 ---
-<Layout>
+<Layout
+  title="Jonathan Briones | Líder Técnico & Arquitecto Cloud AWS"
+  description="Jonathan Briones — Líder Técnico y Arquitecto Cloud. 13+ años en AWS, Terraform, Kubernetes y FinOps. Consultoría software en Valladolid."
+  ogType="profile"
+  jsonLd={[profilePageSchema(pageUrl, site), personSchema(site)]}
+>
   <Hero />
   <Perfil />
   <Stack />
